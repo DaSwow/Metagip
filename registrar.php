@@ -14,10 +14,10 @@
         $queryInsert="INSERT INTO public.usuarios(correo, contrasenia, nombre) VALUES ('$mail', '$password', '$name');";
         pg_query($queryInsert);
         header("location: index.php");
-        echo "Cuenta registrada exitosamente";
+        echo '<script>alert("Cuenta registrada exitosamente")</script>';
        
     }else{
-        echo "Este correo ya esta registrado.";
+        echo '<script>alert( "Este correo ya esta registrado.")</script>';
     }
     
 ?>
