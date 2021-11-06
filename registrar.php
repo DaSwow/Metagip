@@ -19,3 +19,4 @@
         echo "Este correo ya esta registrado.";
     }
 */
+?>
