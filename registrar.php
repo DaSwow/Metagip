@@ -17,7 +17,8 @@
         echo '<script>alert("Cuenta registrada exitosamente")</script>';
        
     }else{
-        echo '<script>alert( "Este correo ya esta registrado.")</script>';
+        header("location: index.php");
+        echo '<script>alert("Este correo ya esta registrado.")</script>';
     }
     
 ?>
