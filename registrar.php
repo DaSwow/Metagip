@@ -1,6 +1,5 @@
 <?php
     require 'db.php';
-    print_r(array_values($db))
 /*    
     session_start();
     $mail=$_POST['correo'];
