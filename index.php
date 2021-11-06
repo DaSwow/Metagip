@@ -14,12 +14,12 @@
         <div class="login-container">
             <div action="registrar.php" class="register">
                 <h2>Registrarse</h2>
-                <form action="">
+                <form action="registrar.php">
                     <input type="text" placeholder="Nombre" class="nombre" name="nombre" required>
                     <input type="text" placeholder="Correo" class="correo" name = "correo" required>
                     <input type="password" placeholder="Contraseña" class="pass" name="contrasenia" required>
                     <input type="password" placeholder="Confirma contraseña" class="repass" required>
-                    <input type="submit" class="submit" value="REGISTRARSE">
+                    <input type="submit" class="submit" value="REGISTRARSE" name="submit">
                 </form>
 
             </div>
