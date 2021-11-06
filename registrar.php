@@ -1,7 +1,4 @@
 <?php
-    header("Location: indexFake.php");
-
-
     require 'db.php';
     echo '<script>alert("aqui toy")</script>';
     session_start();
