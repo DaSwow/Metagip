@@ -10,6 +10,7 @@
     $cantidad= pg_num_rows($consulta);
     if(cantidad>0){
         $query="INSERT INTO public.usuarios(correo, contrasenia, nombre)VALUES ($mail, $password, $name);";
+        echo "Cuenta registrada exitosamente";
         header("location: index.php");
     }else{
             echo "Este correo ya esta registrado.";
