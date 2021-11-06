@@ -12,7 +12,7 @@
 <body>
     <div class="container">
         <div class="login-container">
-            <div action="login.html" class="register">
+            <div class="register">
                 <h2>Registrarse</h2>
                 <form action="">
                     <input type="text" placeholder="Nombre" class="nombre" name="nombre" required>
