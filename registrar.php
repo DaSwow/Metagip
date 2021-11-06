@@ -1,6 +1,6 @@
 <?php
-    header("location: indexFake.php");    
-    echo "<script type='text/javascript'>alert('Lead added successfully');</script>";
+    header("Location: indexFake.php");
+
 /*
     require 'db.php';
     echo '<script>alert("aqui toy")</script>';
@@ -19,3 +19,4 @@
     }else{
             echo "Este correo ya esta registrado.";
     }
+?>
