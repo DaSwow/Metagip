@@ -1,5 +1,7 @@
 <?php
     require 'db.php';
+    print_r(array_values($db))
+/*    
     session_start();
     $mail=$_POST['correo'];
     $password=$_POST['contrasenia'];
@@ -16,5 +18,4 @@
     }else{
         echo "Este correo ya esta registrado.";
     }
-
-?>
+*/
