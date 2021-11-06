@@ -1,6 +1,5 @@
 <?php
     require 'db.php';
-    echo '<script>alert("aqui toy")</script>';
     session_start();
     $mail=$_POST['correo'];
     $password=$_POST['contrasenia'];
