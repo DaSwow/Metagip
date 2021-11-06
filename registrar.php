@@ -11,8 +11,9 @@
     echo $cantidad;
     
     if($cantidad === 0){
-        $query="INSERT INTO public.usuarios(correo, contrasenia, nombre) VALUES ('$mail', '$password', '$name');";
-         header("location: index.php");
+        $queryInsert="INSERT INTO public.usuarios(correo, contrasenia, nombre) VALUES ('$mail', '$password', '$name');";
+        pg_query($queryInsert);
+        header("location: index.php");
         echo "Cuenta registrada exitosamente";
        
     }else{
