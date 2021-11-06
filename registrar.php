@@ -1,6 +1,6 @@
 <?php
     header("location: index.php");    
-    echo '<script>  alert("well done");   </script>';
+   echo "<script type='text/javascript'>alert('Lead added successfully');</script>";
 /*
     require 'db.php';
     echo '<script>alert("aqui toy")</script>';
