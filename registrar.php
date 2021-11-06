@@ -1,5 +1,7 @@
 <?php
     require 'db.php';
+    echo $db;
+    /*
     echo '<script>alert("aqui toy")</script>';
     session_start();
     $mail=$_POST['correo'];
@@ -17,5 +19,5 @@
     }else{
         echo "Este correo ya esta registrado.";
     }
-
+*/
 ?>
