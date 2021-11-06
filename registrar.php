@@ -1,5 +1,5 @@
 <?php
-    echo '<script>alert("aqui toy")</script>';
+     echo '<script>  alert("well done");   </script>';
 /*
     require 'db.php';
     echo '<script>alert("aqui toy")</script>';
