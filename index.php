@@ -1,20 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-    <?php
-        $dbopts = parse_url(getenv('DATABASE_URL'));
-        $app->register(new Csanquer\Silex\PdoServiceProvider\Provider\PDOServiceProvider('pdo'),
-            array(
-                'pdo.server' => array(
-                'driver'   => 'pgsql',
-                'user' => $dbopts["user"],
-                'password' => $dbopts["pass"],
-                'host' => $dbopts["host"],
-                'port' => $dbopts["port"],
-                'dbname' => ltrim($dbopts["path"],'/')
-                )
-            )
-);
-?>
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -27,7 +12,7 @@
 <body>
     <div class="container">
         <div class="login-container">
-            <div class="register">
+            <div action="registrar.php" class="register">
                 <h2>Registrarse</h2>
                 <form action="">
                     <input type="text" placeholder="Nombre" class="nombre" name="nombre" required>
