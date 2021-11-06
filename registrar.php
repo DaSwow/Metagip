@@ -19,4 +19,6 @@
     }else{
             echo "Este correo ya esta registrado.";
     }
+ * 
+ */
 ?>
