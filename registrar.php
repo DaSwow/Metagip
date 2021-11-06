@@ -18,7 +18,7 @@
        
     }else{
         header("location: index.php");
-        echo '<script>alert("Este correo ya esta registrado.")</script>';
+         echo "<script>alert('Este correo ya esta registrado.');</script>";
     }
     
 ?>
