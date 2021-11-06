@@ -1,6 +1,6 @@
 <?php
     require 'db.php';
-    print_r($db) 
+    array_values($db);
     /*
     echo '<script>alert("aqui toy")</script>';
     session_start();
