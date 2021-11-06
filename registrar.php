@@ -8,7 +8,7 @@
     $query="SELECT * FROM public.usuarios WHERE correo='$mail';";
     $consulta = pg_query($conexion,$query);
     $cantidad = pg_num_rows($consulta);
-    if(cantidad==0){
+    if($cantidad == 0){
         $query="INSERT INTO public.usuarios(correo, contrasenia, nombre) VALUES ($mail, $password, $name);";
          header("location: index.php");
         echo "Cuenta registrada exitosamente";
