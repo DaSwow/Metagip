@@ -1,7 +1,7 @@
 <?php
     header("Location: indexFake.php");
 
-/*
+
     require 'db.php';
     echo '<script>alert("aqui toy")</script>';
     session_start();
@@ -14,11 +14,11 @@
     $cantidad= pg_num_rows($consulta);
     if(cantidad>0){
         $query="INSERT INTO public.usuarios(correo, contrasenia, nombre)VALUES ($mail, $password, $name);";
+         header("location: index.php");
         echo "Cuenta registrada exitosamente";
-        header("location: index.php");
+       
     }else{
-            echo "Este correo ya esta registrado.";
+        echo "Este correo ya esta registrado.";
     }
- * 
- */
+
 ?>
