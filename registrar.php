@@ -5,7 +5,7 @@
     $password=$_POST['contrasenia'];
     $name=$_POST['nombre'];
 
-    $query="SELECT * FROM public.usuarios WHERE correo=$mail";
+    $query="SELECT * FROM public.usuarios WHERE correo='$mail';";
     $consulta = pg_query($conexion,$query);
     $cantidad = pg_num_rows($consulta);
     if(cantidad==0){
