@@ -1,0 +1,6 @@
+{
+    "name": "vendor/metagip",
+    "require": {
+        "php": "^8.0.12"
+    }
+}
