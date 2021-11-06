@@ -1,6 +1,7 @@
 {
     "name": "vendor/metagip",
     "require": {
-        "php": "^8.0.12"
+        "php": "^8.0.12",
+        "csanquer/pdo-service-provider": "~1.1dev"
     }
 }
