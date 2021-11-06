@@ -7,7 +7,7 @@
         $user = $db['user'];
         $password = $db['user'];
         $string_conexion = "$host $dbname $port $user $password";
-        echo $string_conexion;
+        echo $host;
         //$conexion = pg_connect($db) or die('failed');
         
 ?>
