@@ -13,14 +13,12 @@
     if($cantidad === 0){
         $queryInsert="INSERT INTO public.usuarios(correo, contrasenia, nombre) VALUES ('$mail', '$password', '$name');";
         pg_query($queryInsert);
-        echo '<script>alert("Cuenta registrada exitosamente")</script>';
+        echo "<script>alert('Cuenta registrada exitosamente')</script>";
         header("location: index.php");
        
        
     }else{
-        echo "<script>alert('Este correo ya esta registrado.');</script>";
-        header("location: index.php");
-        
+        echo "<script type='text/javascript'>alert('Este correo ya esta registrado.');location='index.php';</script>";
     }
     
 ?>
