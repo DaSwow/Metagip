@@ -19,7 +19,7 @@
                     <input type="text" placeholder="Correo" class="correo" name = "correo" required>
                     <input type="password" placeholder="Contraseña" class="pass" name="contrasenia" required>
                     <input type="password" placeholder="Confirma contraseña" class="repass" required>
-                    <input type="submit" class="submit" value="REGISTRARSE" name="submit">
+                    <input type="submit" class="submit" value="Registrarse" name="submit">
                 </form>
 
             </div>
@@ -28,10 +28,9 @@
                 <div class="login-items">
                     <input type="text" placeholder="Correo" class="correo" name="logCorreo" required>
                     <input type="password" placeholder="Contraseña" class="pass" name="logContrasenia" required>
-                    <input type="submit" class="submit" value="REGISTRARSE">
+                    <input type="submit" class="submit" value="Iniciar Sesi&oacute;n" name="submit">
                 </div>
             </div>
-
         </div>
     </div>
 </body>
