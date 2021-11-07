@@ -28,6 +28,7 @@
                 <div class="login-items">
                     <input type="text" placeholder="Correo" class="correo" name="logCorreo" required>
                     <input type="password" placeholder="Contraseña" class="pass" name="logContrasenia" required>
+                    <br><br><br><br>
                     <input type="submit" class="submit" value="Iniciar Sesi&oacute;n" name="submit">
                 </div>
             </div>
