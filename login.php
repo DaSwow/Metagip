@@ -14,7 +14,7 @@ $nombre = pg_fetch_array($consulta, 2);
 echo $cantidad;
 
 if ($cantidad === 1) {
-    echo "<script type='text/javascript'>alert('$nombre]');location='index.php';</script>";
+    echo "<script type='text/javascript'>alert('$nombre');location='index.php';</script>";
 } else {
     echo "<script type='text/javascript'>alert('Datos incorrectos');location='index.php';</script>";
 }
