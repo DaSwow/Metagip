@@ -10,7 +10,7 @@ $query = "SELECT * FROM public.usuarios WHERE correo='$mail' AND contrasenia='$p
 $consulta = pg_query($conexion, $query);
 $cantidad = pg_num_rows($consulta);
 //$nombre = pg_query("SELECT nombre FROM public.usuarios WHERE correo='$mail';");
-$nombre = pg_fetch_array($consulta, 2);
+$nombre = pg_fetch_array($consulta);
 echo $cantidad;
 
 if ($cantidad === 1) {
