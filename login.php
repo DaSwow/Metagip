@@ -10,11 +10,11 @@ $query = "SELECT * FROM public.usuarios WHERE correo='$mail' AND contrasenia='$p
 $consulta = pg_query($conexion, $query);
 $cantidad = pg_num_rows($consulta);
 //$nombre = pg_query("SELECT nombre FROM public.usuarios WHERE correo='$mail';");
-$nombre = pg_fetch_row($consulta);
+$nombre = pg_fetch_array($consulta, 2);
 echo $cantidad;
 
 if ($cantidad === 1) {
-    echo "<script type='text/javascript'>alert('$nombre[2]]');location='index.php';</script>";
+    echo "<script type='text/javascript'>alert('$nombre]');location='index.php';</script>";
 } else {
     echo "<script type='text/javascript'>alert('Datos incorrectos');location='index.php';</script>";
 }
