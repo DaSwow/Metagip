@@ -12,7 +12,7 @@
 <body>
     <div class="container">
         <div class="login-container">
-            <div action="registrar.php" class="register">
+            <div  class="register">
                 <h2>Registrarse</h2>
                 <form action="registrar.php" method="post">
                     <input type="text" placeholder="Nombre" class="nombre" name="nombre" required>
