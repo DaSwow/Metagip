@@ -25,12 +25,12 @@
             </div>
             <div class="login">
                 <h2>Iniciar Sesión</h2>
-                <div class="login-items">
+                <form action="login.php" method="post">
                     <input type="text" placeholder="Correo" class="correo" name="logCorreo" required>
                     <input type="password" placeholder="Contraseña" class="pass" name="logContrasenia" required>
                     <br><br><br><br><br><br>
                     <input type="submit" class="submit" value="Iniciar Sesi&oacute;n" name="submit">
-                </div>
+                </form>
             </div>
         </div>
     </div>
