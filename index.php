@@ -12,7 +12,7 @@
 <body>
     <div class="container">
         <div class="login-container">
-            <div  class="register">
+            <div s class="register">
                 <h2>Registrarse</h2>
                 <form action="registrar.php" method="post">
                     <input type="text" placeholder="Nombre" class="nombre" name="nombre" required>
@@ -28,7 +28,7 @@
                 <div class="login-items">
                     <input type="text" placeholder="Correo" class="correo" name="logCorreo" required>
                     <input type="password" placeholder="Contraseña" class="pass" name="logContrasenia" required>
-                    <br><br><br><br>
+                    <br><br><br><br><br><br>
                     <input type="submit" class="submit" value="Iniciar Sesi&oacute;n" name="submit">
                 </div>
             </div>
