@@ -18,7 +18,7 @@
                     <input type="text" placeholder="Nombre" class="nombre" name="nombre" required>
                     <input type="text" placeholder="Correo" class="correo" name = "correo" required>
                     <input type="password" placeholder="Contraseña" class="pass" name="contrasenia" required>
-                    <input type="password" placeholder="Confirma contraseña" class="repass" required>
+                    <input type="password" placeholder="Confirma contraseña" class="repass" name="contrasenia2" required>
                     <input type="submit" class="submit" value="Registrarse" name="submit">
                 </form>
 
