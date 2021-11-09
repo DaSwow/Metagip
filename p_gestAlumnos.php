@@ -21,7 +21,7 @@
                         </tr>
                     </table>
                     <nav>
-                        <form action="">
+                        <form action="s_consultarAlumnos.php">
                             <input type="submit" class="submit" value="Editar">
                             <input type="submit" class="submit" value="Elimar">
                             <input type="submit" class="submit" value="Agregar">
