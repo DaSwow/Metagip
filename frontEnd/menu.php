@@ -3,7 +3,7 @@
 <html lang="en">
 <head>
 
-  <link rel="stylesheet" href="estilos/style.css">
+    <link rel="stylesheet" href="../estilos/style.css">
  
   <title>Menu Principal</title>
 </head>
