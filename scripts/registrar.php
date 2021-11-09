@@ -16,12 +16,12 @@ if ($password === $password2 and validateEmail($mail)) {
     if ($cantidad === 0) {
         $queryInsert = "INSERT INTO public.usuarios(correo, contrasenia, nombre) VALUES ('$mail', '$password', '$name');";
         pg_query($queryInsert);
-        echo "<script type='text/javascript'>alert('Cuenta registrada exitosamente');location='index.php';</script>";
+        echo "<script type='text/javascript'>alert('Cuenta registrada exitosamente');location='../index.php';</script>";
     } else {
-        echo "<script type='text/javascript'>alert('Este correo ya esta registrado.');location='index.php';</script>";
+        echo "<script type='text/javascript'>alert('Este correo ya esta registrado.');location='../index.php';</script>";
     }
 } else {
-    echo "<script type='text/javascript'>alert('Las contraseñas no son iguales, favor de verificar.');location='index.php';</script>";
+    echo "<script type='text/javascript'>alert('Las contraseñas no son iguales, favor de verificar.');location='../index.php';</script>";
 }
 
 function validateEmail($mail){
@@ -33,7 +33,7 @@ function validateEmail($mail){
     if(filter_var($mail, FILTER_VALIDATE_EMAIL)) {
         return true;
     } else {
-        echo "<script type='text/javascript'>alert('{$mail}: no es un correo valido.');location='index.php';</script>";
+        echo "<script type='text/javascript'>alert('{$mail}: no es un correo valido.');location='../index.php';</script>";
     }
 }
 ?>

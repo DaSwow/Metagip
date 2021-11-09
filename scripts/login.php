@@ -16,7 +16,7 @@ if ($cantidad === 1) {
     $_SESSION['nombre_usuario']=$nombre[2];
     echo "<script type='text/javascript'>alert('Bienvenido $nombre[2]');location='frontEnd/menu.php';</script>";
 } else {
-    echo "<script type='text/javascript'>alert('Datos incorrectos');location='index.php';</script>";
+    echo "<script type='text/javascript'>alert('Datos incorrectos');location='../index.php';</script>";
 }
 
 ?>
