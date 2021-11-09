@@ -39,10 +39,13 @@ $consulta = pg_query($conexion, $query);
                         <?php }?>
                     </table>
                     <nav>
-                        <form action="p_menu.php">
+                        <form action="s_gestAlumnos.php" method="post">
+                            <input type="number" placeholder="0" class="id" name="idAl" required>
+                            <input type="text" placeholder="nombre" class="nombre" name="nombreAl" required>
+                            <input type="text" placeholder="correo" class="correo" name="correoAl" required>
                           <!--  <input type="submit" class="submit" value="Editar">
                             <input type="submit" class="submit" value="Elimar">-->
-                            <input type="submit" class="submit" value="Agregar">
+                            <input type="submit" class="submit" value="Agregar"><br><br><br>
                             <input type="submit" class="submit" value="Regresar">
                         </form> 
                     </nav> 
