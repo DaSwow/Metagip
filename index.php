@@ -14,7 +14,7 @@
         <div class="login-container">
             <div s class="register">
                 <h2>Registrarse</h2>
-                <form action="registrar.php" method="post">
+                <form action="s_registrar.php" method="post">
                     <input type="text" placeholder="Nombre" class="nombre" name="nombre" required>
                     <input type="text" placeholder="Correo" class="correo" name = "correo" required>
                     <input type="password" placeholder="Contraseña" class="pass" name="contrasenia" required>
@@ -25,7 +25,7 @@
             </div>
             <div class="login">
                 <h2>Iniciar Sesión</h2>
-                <form action="login.php" method="post">
+                <form action="s_login.php" method="post">
                     <input type="text" placeholder="Correo" class="correo" name="logCorreo" required>
                     <input type="password" placeholder="Contraseña" class="pass" name="logContrasenia" required>
                     <br><br><br><br><br><br>
