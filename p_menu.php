@@ -13,12 +13,12 @@
                 <div class="menu">
                     <h2>Menu Principal</h2>
                     <form>
-                        <input type="submit" formaction="p_gestAlumnos.php" value="Gestionar Alumnos">
-                        <input type="submit" formaction="p_gestCursos.php" value="Gestionar Cursos">
-                        <input type="submit" formaction="" value="Registrar Alumnos">
-                        <input type="submit" formaction="" value="Importar CVS">
-                        <input type="submit" formaction="" value="Administrar Asistencias">
-                        <input type="submit" formaction="" value="Log Out">
+                        <input type="submit" class="submnit" formaction="p_gestAlumnos.php" value="Gestionar Alumnos">
+                        <input type="submit" class="submnit" formaction="p_gestCursos.php" value="Gestionar Cursos">
+                        <input type="submit" class="submnit" formaction="" value="Registrar Alumnos">
+                        <input type="submit" class="submnit" formaction="" value="Importar CVS">
+                        <input type="submit" class="submnit" formaction="" value="Administrar Asistencias">
+                        <input type="submit" class="submnit" formaction="" value="Log Out">
                     </form>
                 </div>
             </div>
