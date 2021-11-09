@@ -11,9 +11,11 @@ $cantidad = pg_num_rows($consulta);
 $fila = pg_fetch_row($consulta);
 
 if ($cantidad >= 1) {
-    echo $fila[0]+$fila[1]+$fila[2];
+    echo "<script type='text/javascript'>alert('Alumno $fila[1]');location='p_gestAlumnos.php';</script>";
+   // echo $fila[0]+$fila[1]+$fila[2];
 }else{
-    echo "no hay alumnos registrados aun";
+    echo "<script type='text/javascript'>alert('no hay alumnos registrados aun');location='p_gestAlumnos.php';</script>";
+    //echo "no hay alumnos registrados aun";
 }
 
 ?>
