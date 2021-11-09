@@ -28,9 +28,9 @@ $consulta = pg_query($conexion, $query);
                                 <td><?php echo $row['nombre']; ?></td>
                                 <td><?php echo $row['correo']; ?></td>
                                 <td><form action="" class="optb">
-                                        <td><input type="submit" class="optns" value="Editar"></td>
-                                        <td><input type="submit" class="optns" value="Elimar"></td>
-                                    </form></td>                           
+                                        <input type="submit" class="optns" value="Editar">
+                                        <input type="submit" class="optns" value="Elimar">
+                                    </form></td>
                                     <!--<td class="fila2"><p>00000189362</p></td>
                                     <td class="fila2"><p>Edith </p></td>
                                     <td class="fila2"><p>asdasdas@gmail.com</p></td>-->
