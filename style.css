@@ -176,6 +176,10 @@ body{
 
 }
 
+.menu .optb{
+  width: 120px;  
+}
+
 .menu .optns{
   width: 50px;
   height: 20px;
@@ -190,7 +194,7 @@ body{
 
 .menu .submit{
   width: 150px;
-  height: 30px;
+  height: 20px;
   padding: 45px;
   background: #A9E2F3;
   color: black;
