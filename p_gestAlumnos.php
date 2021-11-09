@@ -23,7 +23,7 @@ $consulta = pg_query($conexion, $query);
                             <td class="fila"><p>Nombre</p></td>
                             <td class="fila"><p>Email</p></td>
                         </tr>
-                        <?php while ($row = $consulta->fetch_assoc()){?>
+                        <?php while ($row = pg_fetch_assoc($consulta)){?>
                         <tr>
                             <td><?php echo $row['id'];?></td>
                             <td><?php echo $row['nombre'];?></td>
