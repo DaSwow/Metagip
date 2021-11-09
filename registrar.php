@@ -7,7 +7,7 @@ $password = $_POST['contrasenia'];
 $password2 = $_POST['contrasenia2'];
 $name = $_POST['nombre'];
 
-if ($password === $password2) {
+if ($password === $password2 and validateEmail($mail)) {
     $query = "SELECT * FROM public.usuarios WHERE correo='$mail';";
     $consulta = pg_query($conexion, $query);
     $cantidad = pg_num_rows($consulta);
@@ -22,5 +22,18 @@ if ($password === $password2) {
     }
 } else {
     echo "<script type='text/javascript'>alert('Las contraseñas no son iguales, favor de verificar.');location='index.php';</script>";
+}
+
+function validateEmail($mail){
+    
+    //remueve caracteres ilegales en el correo (como los espacios en blanco)
+    $email = filter_var($email, FILTER_SANITIZE_EMAIL);
+    
+    //valida si $mail tiene formato de correo valido (nombre@host.dominio = ejemplo@mail.com)
+    if(filter_var($mail, FILTER_VALIDATE_EMAIL)) {
+        return true;
+    } else {
+        echo "<script type='text/javascript'>alert('{$mail}: no es un correo valido.');location='index.php';</script>";
+    }
 }
 ?>
