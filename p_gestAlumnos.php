@@ -3,9 +3,8 @@ include 'db.php';
 session_start();
 $correo_prof = $_SESSION['correo_usuario'];
 
-$query ="SELECT * FROM public.alumnos WHERE profesor='$correo_prof'";
+$query = "SELECT * FROM public.alumnos WHERE profesor='$correo_prof'";
 $consulta = pg_query($conexion, $query);
-
 ?>
 <!DOCTYPE html>
 <link rel="stylesheet" href="style.css">
@@ -23,23 +22,23 @@ $consulta = pg_query($conexion, $query);
                             <td class="fila"><p>Nombre</p></td>
                             <td class="fila"><p>Email</p></td>
                         </tr>
-                        <?php while ($row = pg_fetch_assoc($consulta)){?>
-                        <tr>
-                            <td><?php echo $row['id'];?></td>
-                            <td><?php echo $row['nombre'];?></td>
-                            <td><?php echo $row['correo'];?></td>
-                            <td><form action="" class="optb">
-                                    <div><input type="submit" class="optns" value="Editar"></div>
-                                    <div><input type="submit" class="optns" value="Elimar"></div>
-                            </form></td>                           
-                            <!--<td class="fila2"><p>00000189362</p></td>
-                            <td class="fila2"><p>Edith </p></td>
-                            <td class="fila2"><p>asdasdas@gmail.com</p></td>-->
-                        </tr>
-                        <?php }?>
+                        <?php while ($row = pg_fetch_assoc($consulta)) { ?>
+                            <tr>
+                                <td><?php echo $row['id']; ?></td>
+                                <td><?php echo $row['nombre']; ?></td>
+                                <td><?php echo $row['correo']; ?></td>
+                                <td><form action="" class="optb">
+                                        <td><input type="submit" class="optns" value="Editar"></td>
+                                        <td><input type="submit" class="optns" value="Elimar"></td>
+                                    </form></td>                           
+                                    <!--<td class="fila2"><p>00000189362</p></td>
+                                    <td class="fila2"><p>Edith </p></td>
+                                    <td class="fila2"><p>asdasdas@gmail.com</p></td>-->
+                            </tr>
+                        <?php } ?>
                     </table>
                     <nav>
-                        <form action="s_gestAlumnos.php" method="post">
+                        <form action="s_gestAlumnos.php" method="post" class="optb">
                             <input type="number" placeholder="0" class="id" name="idAl" required>
                             <input type="text" placeholder="nombre" class="nombre" name="nombreAl" required>
                             <input type="text" placeholder="correo" class="correo" name="correoAl" required>
