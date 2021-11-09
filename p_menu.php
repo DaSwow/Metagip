@@ -12,7 +12,7 @@
             <div class="menu-container">
                 <div class="menu">
                     <h2>Menu Principal</h2>
-                    <form>
+                    <form action="">
                         <input type="submit" class="submnit" formaction="p_gestAlumnos.php" value="Gestionar Alumnos">
                         <input type="submit" class="submnit" formaction="p_gestCursos.php" value="Gestionar Cursos">
                         <input type="submit" class="submnit" formaction="" value="Registrar Alumnos">
