@@ -175,11 +175,23 @@ body{
   color: #333;
 
 }
- 
-.menu .submit{
-  width: 80px;
-  height: 15px;
+
+.menu .optns{
+  width: 50px;
+  height: 20px;
   padding: 10px;
+  background: #A9E2F3;
+  color: black;
+  font-size: 12px;
+  box-shadow: 0 0 3px 0 rgba(0, 0, 0, .2);
+  cursor: pointer;
+  
+}
+
+.menu .submit{
+  width: 150px;
+  height: 30px;
+  padding: 45px;
   background: #A9E2F3;
   color: black;
   font-size: 12px;
