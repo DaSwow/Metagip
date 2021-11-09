@@ -22,7 +22,6 @@ $consulta = pg_query($conexion, $query);
                             <td class="fila1"><p>ID</p></td>
                             <td class="fila"><p>Nombre</p></td>
                             <td class="fila"><p>Email</p></td>
-                            <td class="fila"><p>Opciones</p></td>
                         </tr>
                         <?php while ($row = pg_fetch_assoc($consulta)){?>
                         <tr>
@@ -40,7 +39,7 @@ $consulta = pg_query($conexion, $query);
                         <?php }?>
                     </table>
                     <nav>
-                        <form action="">
+                        <form action="p_menu.php">
                           <!--  <input type="submit" class="submit" value="Editar">
                             <input type="submit" class="submit" value="Elimar">-->
                             <input type="submit" class="submit" value="Agregar">

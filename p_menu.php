@@ -18,7 +18,7 @@
                         <input type="submit" class="submnit" formaction="" value="Registrar Alumnos">
                         <input type="submit" class="submnit" formaction="" value="Importar CVS">
                         <input type="submit" class="submnit" formaction="" value="Administrar Asistencias">
-                        <input type="submit" class="submnit" formaction="" value="Log Out">
+                        <input type="submit" class="submnit" formaction="index.php" value="Log Out">
                     </form>
                 </div>
             </div>
