@@ -38,7 +38,7 @@ $consulta = pg_query($conexion, $query);
                         <?php } ?>
                     </table>
                     <nav>
-                        <form action="s_gestAlumnos.php" method="post" class="optb">
+                        <form action="s_gestAlumnos.php" method="post">
                             <input type="number" placeholder="0" class="id" name="idAl" required>
                             <input type="text" placeholder="nombre" class="nombre" name="nombreAl" required>
                             <input type="text" placeholder="correo" class="correo" name="correoAl" required>
