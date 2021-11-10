@@ -3,9 +3,13 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/S:/Dev%20Kits/GitProjects/Web/Metagip/registrar.php</file>
+            <file>file:/S:/Dev%20Kits/GitProjects/Web/Metagip/style.css</file>
             <file>file:/S:/Dev%20Kits/GitProjects/Web/Metagip/index.php</file>
-            <file>file:/S:/Dev%20Kits/GitProjects/Web/Metagip/login.php</file>
+            <file>file:/S:/Dev%20Kits/GitProjects/Web/Metagip/p_gestCursos.php</file>
+            <file>file:/S:/Dev%20Kits/GitProjects/Web/Metagip/s_login.php</file>
+            <file>file:/S:/Dev%20Kits/GitProjects/Web/Metagip/db.php</file>
+            <file>file:/S:/Dev%20Kits/GitProjects/Web/Metagip/p_menu.php</file>
+            <file>file:/S:/Dev%20Kits/GitProjects/Web/Metagip/p_gestAlumnos.php</file>
         </group>
     </open-files>
 </project-private>
