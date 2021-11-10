@@ -42,7 +42,7 @@ $consulta = pg_query($conexion, $query);
                             <input type="text" placeholder="correo" class="correo" name="correoAl" required>
                           <!--  <input type="submit" class="submit" value="Editar">
                             <input type="submit" class="submit" value="Elimar">-->
-                            <input type="submit" class="submit" value="Agregar"><br><br><br>
+                            <input type="submit" class="submit" value="Agregar"><br><br><br><br><br>
                             <input type="submit" class="submit" value="Regresar">
                         </form> 
                     </nav> 
