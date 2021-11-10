@@ -177,7 +177,8 @@ body{
 }
 
 .menu .optb{
-  width: 120px;  
+  width: 120px;
+  display: inline-block;
 }
 
 .menu .optns{
