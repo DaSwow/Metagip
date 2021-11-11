@@ -233,7 +233,7 @@ overflow:scroll;
 
 td{
 width:15%;
-height:50px;
+height:20px;
 text-align:left;
 vertical-align:top;
 border-spacing:0;
@@ -242,12 +242,12 @@ border-spacing:0;
 td.fila{
 background-color:Azure;
 width:30%;
-height:10px;
+height:20px;
 
 }
 td.fila1{
 width:15%;
-height:40px;
+height:20px;
 background-color:Azure;
 }
 
@@ -257,11 +257,17 @@ height:10px;
 font-size:18px;
 font-weight:normal;
 }
+
+form.agregarAlumno{
+align-content: flex-end;
+}
+
 nav{
 position:absolute;
 left:780px;
 cursor:pointer;
 }
+
 #scroll{
     overflow:scroll;
     height:520px;
