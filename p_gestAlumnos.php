@@ -32,10 +32,9 @@ function editar($id) {
                                 <td><?php echo $row['nombre']; ?></td>
                                 <td><?php echo $row['correo']; ?></td>
 
-                                <td><input type="submit" class="optns" <?php echo 'id=' . $row['id'] ?> value="Editar"></td>
-                                <td><form action="s_ElimAlumno.php?id=<?php echo $row['id'] ?>" method="post">
-                                        <input type="submit" class="optns" value="Editar">
-                                    </form>
+                                <td><input type="submit" class="optns" <?php echo $row['id'] ?> value="Editar"></td>
+                                <td href="s_ElimAlumno.php?id=<?php echo $row['id'] ?>" class="btn btn-danger">
+                                        <i class="far fa-trash-alt"></i>
                                 </td>
                             </tr>
                         <?php } ?>
