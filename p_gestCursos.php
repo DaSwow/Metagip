@@ -42,9 +42,25 @@ $consulta = pg_query($conexion, $query);
                             <td class="fila"><p>Hora-Fin</p></td>
                             <td class="fila"><p>Unidades</p></td>
                         </tr>
-                        <tr>
-
-                        </tr>
+                        <?php while ($row = pg_fetch_assoc($consulta)) { ?>
+                            <tr>
+                                <td><?php echo $row['clave']; ?></td>
+                                <td><?php echo $row['nombre']; ?></td>
+                                <td><?php echo $row['horaIni']; ?></td>
+                                <td><?php echo $row['horaFin']; ?></td>
+                                <td><?php echo $row['cursos']; ?></td>
+                                <td>
+                                    <form action="s_editAlumno.php?id=<?php echo $row['id'] ?>" method="post">
+                                        <input type="submit" class="optns" value="Editar" onclick="return confirm('¿Desea Editar el curso?');"/>
+                                    </form>
+                                </td>
+                                <td>
+                                    <form action="s_ElimAlumno.php?id=<?php echo $row['id'] ?>" method="post">
+                                        <input type="submit" class="optns" value="Borrar" onclick="return confirm('¿Seguro que desea eliminar al curso?');"/>
+                                    </form>
+                                </td>
+                            </tr>
+                        <?php } ?>
                     </table>
                     <br>
                 </div>
