@@ -22,7 +22,7 @@ session_start();
                     <form action="">
                         <input type="submit" class="submnit" formaction="p_gestAlumnos.php" value="Gestionar Alumnos">
                         <input type="submit" class="submnit" formaction="p_gestCursos.php" value="Gestionar Cursos">
-                        <input type="submit" class="submnit" formaction="" value="Registrar Alumnos">
+                        <input type="submit" class="submnit" formaction="" value="Registrar Alumnos en Curso">
                         <input type="submit" class="submnit" formaction="" value="Importar CVS">
                         <input type="submit" class="submnit" formaction="" value="Administrar Asistencias">
                         <input type="submit" class="submnit" formaction="index.php" value="Log Out">
