@@ -17,7 +17,7 @@ $consulta = pg_query($conexion, $query);
     <div class="container">
         <div class="table-container2">
             <div class="menu" >
-                <div id="scroll" style="margin-right:  20px;">
+                <div id="scroll" style="margin-right:  30px;">
                     <h2>Gestionar Cursos</h2>
                     <nav>
                         <form action="s_AgregarCurso.php" method="POST">
