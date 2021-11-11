@@ -1,5 +1,7 @@
 <?php
 
+session_start();
+
 require 'db.php';
 session_start();
 $mail = $_POST['logCorreo'];
