@@ -18,6 +18,7 @@ $cantidadUnidades = $curso[4];
         <div class="unidad" >
             <h2>Unidades</h2>
             <div class="unidad-items">
+                <form action="s_gestUnidades.php?clave=<?php echo $clave?>" method="post">
                 <table class="colm1" border="1">
                     <tr>
                         <td class="fila1"><p>Unidad</p></td>
@@ -27,11 +28,15 @@ $cantidadUnidades = $curso[4];
                     <?php for ($i = 0; $i < $cantidadUnidades; $i++) { ?>
                         <tr>
                             <td><?php echo $i + 1; ?></td>
-                            <td><?php echo "fechaIni"; ?></td>
-                            <td><?php echo "fechaFin"; ?></td>
+                            <td><input type="date" id="fechaIni" name="fechaIni<?php echo $i;?>"  required></td>
+                            <td><input type="date" id="fechaFin"  name="fechaFin<?php echo $i;?>" required></td>
+                           <!-- <td><php echo "fechaIni"; ?></td>
+                            <td><php echo "fechaFin"; ?></td>-->
                         </tr>
                     <?php } ?>
                 </table>
+                    <input type="submit" class="submit" value="Actualizar">
+                </form>
             </div>
         </div> 
         <form action="p_gestCursos.php" method="post">
