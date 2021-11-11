@@ -5,7 +5,7 @@ session_start();
 require 'db.php';
 
 $id = $_GET['id'];
-$query = "DELETE FROM public.alumnos WHERE id = $id";
+$query = "DELETE FROM public.alumnos WHERE id = '$id'";
 $consulta = pg_query($conexion, $query);
 
 if (!$consulta) {
