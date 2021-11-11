@@ -36,7 +36,7 @@ $consulta = pg_query($conexion, $query);
                         <?php } ?>
                     </table>
                     <nav>
-                        <form action="s_gestAlumnos.php" method="post" class="agregarAlumno">
+                        <form action="s_gestAlumnos.php" method="post">
                             <input type="test" placeholder="ID" class="id" name="idAl" pattern="[0-9]+" required>
                             <input type="text" placeholder="nombre" class="nombre" name="nombreAl" required>
                             <input type="text" placeholder="correo" class="correo" name="correoAl" required>

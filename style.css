@@ -237,8 +237,15 @@ height:20px;
 text-align:left;
 vertical-align:top;
 border-spacing:0;
+}
+
+td.optns{
+border: 0px;
+width: 20px;
+height: 20px;
 
 }
+
 td.fila{
 background-color:Azure;
 width:30%;
@@ -256,10 +263,6 @@ width:3%;
 height:10px;
 font-size:18px;
 font-weight:normal;
-}
-
-form.agregarAlumno{
-align-content: flex-end;
 }
 
 nav{
