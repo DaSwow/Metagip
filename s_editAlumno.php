@@ -1,10 +1,11 @@
 <?php
+
 session_start();
 
 require 'db.php';
 
 $id = $_GET['id'];
-$query = "GET FROM public.alumnos WHERE id = '$id'";
+$query = "SELECT * FROM public.alumnos WHERE id = '$id'";
 $consulta = pg_query($conexion, $query);
 $alumno = pg_fetch_row($consulta);
 
@@ -12,13 +13,11 @@ if (!$consulta) {
     echo "<script type='text/javascript'>alert('Error de coneccion');location='p_gestAlumnos.php';</script>";
 }
 
-if(isset($_GET['update'])){
+if (isset($_GET['update'])) {
     $queryInsert = "UPDATE FROM public.alumnos (nombre,correo) VALUES ('$nombreal','$correoal') WHERE id = '$idAl'";
-        pg_query($queryInsert);
-         echo "<script type='text/javascript'>alert('Alumno registrado exitosamente');location='p_gestAlumnos.php';</script>";
+    pg_query($queryInsert);
+    echo "<script type='text/javascript'>alert('Alumno registrado exitosamente');location='p_gestAlumnos.php';</script>";
 }
-
-
 ?>
 <!DOCTYPE html>
 <link rel="stylesheet" href="style.css">
