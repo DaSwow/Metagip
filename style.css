@@ -240,7 +240,7 @@ td{
 }
 
 td.optns{
-    border: 0px;
+    border: 0;
     width: 20px;
     height: 15px;
 
@@ -267,7 +267,7 @@ td.fila2 p{
 
 nav{
     position:absolute;
-    left:780px;
+    left:20px;
     cursor:pointer;
 }
 
