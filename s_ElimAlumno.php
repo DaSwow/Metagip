@@ -4,6 +4,8 @@ session_start();
 
 require 'db.php';
 
+echo "<script>if(confirm('Deseas continuar?')){}else{ alert('Operacion cancelada');location='p_gestAlumnos.php');}</script>"; 
+
 $id = $_GET['id'];
 $query = "DELETE FROM public.alumnos WHERE id = '$id'";
 $consulta = pg_query($conexion, $query);
