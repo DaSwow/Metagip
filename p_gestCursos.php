@@ -36,7 +36,7 @@ $consulta = pg_query($conexion, $query);
                                 <input type="submit" class="submit" value="Regresar">
                             </form>
                     </nav>
-                    <table class="colm1"border="1">
+                    <table class="colm1" border="1">
                         <tr>
                             <td class="fila1"><p>Clave</p></td>
                             <td class="fila"><p>Nombre</p></td>
@@ -66,6 +66,11 @@ $consulta = pg_query($conexion, $query);
                                         <input type="submit" class="optns" value="Borrar" onclick="return confirm('¿Seguro que desea eliminar el curso?');"/>
                                     </form>
                                 </td>
+                                <td>
+                                    <form action="s_elimCurso.php?clave=<?php echo $row['clave'] ?>" method="post">
+                                        <input type="submit" class="optns" value="Unidades"/>
+                                    </form>
+                                </td>
                             </tr>
                         <?php } ?>
                     </table>
@@ -75,8 +80,18 @@ $consulta = pg_query($conexion, $query);
             <div class="unidad" >
                 <h2>Unidades</h2>
                 <div class="unidad-items">
-                    <input type="text" placeholder="Inicio" class="inicio">
-                    <input type="text" placeholder="Fin" class="fin">
+                     <table class="colm1" border="1">
+                        <tr>
+                            <td class="fila1"><p>Fecha Inicio</p></td>
+                            <td class="fila"><p>Fecha Fin</p></td>
+                        </tr>
+                        <?php while ($row = pg_fetch_assoc($consulta)) { ?>
+                            <tr>
+                                <td><?php echo $row['fechaIni']; ?></td>
+                                <td><?php echo $row['fechaFin']; ?></td>
+                            </tr>
+                        <?php } ?>
+                    </table>
                 </div>
             </div>
         </div>
