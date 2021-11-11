@@ -3,13 +3,13 @@ session_start();
 
 require 'db.php';
 
-$id = $_GET['id'];
-$query = "SELECT * FROM public.alumnos WHERE id = '$id'";
+$clave = $_GET['clave'];
+$query = "SELECT * FROM public.cursos WHERE clave = '$clave'";
 $consulta = pg_query($conexion, $query);
-$alumno = pg_fetch_row($consulta);
+$curso = pg_fetch_row($consulta);
 
 if (!$consulta) {
-    echo "<script type='text/javascript'>alert('Error de coneccion');location='p_gestAlumnos.php';</script>";
+    echo "<script type='text/javascript'>alert('Error de conexión.');location='p_gestCursos.php';</script>";
 }
 
 if (isset($_POST['update'])) {
@@ -17,7 +17,7 @@ if (isset($_POST['update'])) {
     $cAl = $_POST['correoAl'];
     $queryInsert = "UPDATE public.alumnos SET nombre = '$nAl',correo = '$cAl' WHERE id = '$alumno[0]'";
     pg_query($conexion, $queryInsert);
-    echo "<script type='text/javascript'>alert('Actualizacion completa');location='p_gestAlumnos.php';</script>";
+    echo "<script type='text/javascript'>alert('Actualizacion completa');location='p_gestCursos.php';</script>";
 }
 ?>
 <!DOCTYPE html>
@@ -28,11 +28,15 @@ if (isset($_POST['update'])) {
         <div class="menu" >
             <nav class="editAlumno">
                 <h2>Editar Alumno</h2>
-                <form action="s_editAlumno.php?id=<?php echo $alumno[0] ?>" method="post">
-                    <input type="test" placeholder="ID" class="id" name="idAl" value="<?php echo $alumno[0]; ?>" readonly="readonly">
-                    <input type="text" placeholder="nombre" class="nombre" name="nombreAl" value="<?php echo $alumno[1]; ?>" required>
-                    <input type="text" placeholder="correo" class="correo" name="correoAl" value="<?php echo $alumno[2]; ?>" required>
-                    <input type="submit" class="submit" value="actualizar" name="update">
+                <form action="s_editCurso.php?clave=<?php echo $curso[0] ?>" method="post">
+                            <input type="text" placeholder="Clave" class="clave" name="clave"  readonly="readonly">
+                            <input type="text" placeholder="Nombre" class="nombre" name="nombreCurso"  value="<?php echo $alumno[1]; ?>" required>
+                            <input type="time" id="appt-time"  name="horaIni" value="<?php echo $alumno[2]; ?>" required>
+                            <input type="time" id="appt-time2"  name="horaFin" value="<?php echo $alumno[3]; ?>" required>
+                            <input type="date" id="fechaIni" name="fechaIni"  value="<?php echo $alumno[4]; ?>" required>
+                            <input type="date" id="fechaFin"  name="fechaFin" value="<?php echo $alumno[5]; ?>" required>
+                            <input type="number" placeholder="Unidades" class="Unidades" name="unidades" min="0" max="8"  >
+                            <input type="submit" class="submit" value="Agregar" name="update">
                 </form>
             </nav>
         </div>
