@@ -26,12 +26,12 @@ $consulta = pg_query($conexion, $query);
                             <input type="time" id="appt-time"  name="horaIni" required>
                             <input type="time" id="appt-time"  name="horaFin" required>
                             <input type="text" placeholder="Unidades" class="Unidades" name="unidades" required>
-                            <input type="submit" class="submit" value="Agregar">
+                            <input type="number" class="submit" value="Agregar">
                         </form> 
                             <br><br><br>
                             <input type="submit" class="submit" value="Editar"> 
                             <input type="submit" class="submit" value="Eliminar">
-                            <input type="submit" class="submit" value="Regresar"> >
+                            <input type="submit" class="submit" value="Regresar"> 
                     </nav>
                     <table class="colm1"border="1">
                         <tr>
