@@ -1,9 +1,8 @@
 <?php
 include 'db.php';
 session_start();
-$correo_prof = $_SESSION['correo_usuario'];
 $clave=$_POST['clave'];
-$query = "SELECT * FROM public.unidades WHERE clave='$clave'";
+$query = "SELECT * FROM public.unidades WHERE clave='$clave';";
 $consulta = pg_query($conexion, $query);
 
 $cantidad = pg_num_rows($consulta);
