@@ -42,15 +42,7 @@ $consulta = pg_query($conexion, $query);
                             <td class="fila"><p>Hora-Fin</p></td>
                             <td class="fila"><p>Unidades</p></td>
                         </tr>
-                        <?php while ($row = pg_fetch_assoc($consulta)) { ?>
-                            <tr>
-                                <td><?php echo $row['clave']; ?></td>
-                                <td><?php echo $row['nombre']; ?></td>
-                                <td><?php echo $row['horaIni']; ?></td>
-                                <td><?php echo $row['horaFin']; ?></td>
-                                <td><?php echo $row['cursos']; ?></td>
-                            </tr>
-                        <?php } ?>
+
                     </table>
                     <br>
                 </div>
