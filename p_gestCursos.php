@@ -49,7 +49,7 @@ $consulta = pg_query($conexion, $query);
                     <br>
                 </div>
             </div>
-            <div class="unidad">
+            <div class="unidad" style="margin-left: 5px;">
                 <h2>Unidades</h2>
                 <div class="unidad-items">
                     <input type="text" placeholder="Inicio" class="inicio">
