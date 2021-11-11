@@ -32,7 +32,7 @@ $consulta = pg_query($conexion, $query);
                                 <td><input type="submit" class="optns" value="Editar"></td>
                                 <td>
                                     <form action="s_ElimAlumno.php?id=<?php echo $row['id'] ?>" method="post">
-                                        <input type="submit" class="optns" value="Borrar">
+                                        <input type="submit" class="optns" value="Borrar" onclick="return confirm('Seguro que desea eliminar al alumno?');"/>
                                     </form>
                                 </td>
                             </tr>
