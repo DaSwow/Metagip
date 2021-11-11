@@ -43,8 +43,9 @@ $consulta = pg_query($conexion, $query);
                           <!--  <input type="submit" class="submit" value="Editar">
                             <input type="submit" class="submit" value="Elimar">-->
                             <input type="submit" class="submit" value="Agregar"><br><br><br><br><br>
+                        </form>
+                        <form action="p_menu.php" method="post">
                             <input type="submit" class="submit" value="Regresar">
-                        </form> 
                     </nav> 
 
                 </div>
