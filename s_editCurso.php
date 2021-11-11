@@ -55,9 +55,9 @@ if (isset($_POST['update'])) {
                     <input type="text" placeholder="Nombre" class="nombre" name="nombreAl"  value="<?php echo $curso[1]; ?>" required>
                     <input type="time" id="appt-time"  name="horaIniAl" value="<?php echo $curso[2]; ?>" required>
                     <input type="time" id="appt-time2"  name="horaFinAl" value="<?php echo $curso[3]; ?>" required>
-                    <input type="date" id="fechaIni" name="fechaIniAl"  value="<?php echo $curso[4]; ?>" required>
-                    <input type="date" id="fechaFin"  name="fechaFinAl" value="<?php echo $curso[5]; ?>" required>
-                    <input type="number" placeholder="Unidades" class="unidades" name="unidadesAl" min="0" max="8" value="<?php echo $curso[6]; ?>" required >
+                    <input type="date" id="fechaIni" name="fechaIniAl"  value="<?php echo $curso[6]; ?>" required>
+                    <input type="date" id="fechaFin"  name="fechaFinAl" value="<?php echo $curso[7]; ?>" required>
+                    <input type="number" placeholder="Unidades" class="unidades" name="unidadesAl" min="0" max="8" value="<?php echo $curso[4]; ?>" required >
                     <input type="submit" class="submit" value="Agregar" name="update">
                 </form>
             </nav>
