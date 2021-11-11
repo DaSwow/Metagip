@@ -42,11 +42,7 @@ $consulta = pg_query($conexion, $query);
                             <td class="fila"><p>Unidades</p></td>
                         </tr>
                         <tr>
-                            <td class="fila2"><p>00000189362</p></td>
-                            <td class="fila2"><p>Edith </p></td>
-                            <td class="fila2"><p>8:00</p></td>
-                            <td class="fila2"><p>9:30</p></td>
-                            <td class="fila2"><p>6</p></td>
+
                         </tr>
                     </table>
                     <br>
