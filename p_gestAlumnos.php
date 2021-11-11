@@ -34,7 +34,7 @@ function editar($id) {
 
                                 <td><input type="submit" class="optns" <?php echo $row['id'] ?> value="Editar"></td>
                                 <td href="s_ElimAlumno.php?id=<?php echo $row['id'] ?>" class="btn btn-danger">
-                                        <i class="far fa-trash-alt"></i>
+                                        <input type="submit" class="optns" value="Eliminar">
                                 </td>
                             </tr>
                         <?php } ?>
