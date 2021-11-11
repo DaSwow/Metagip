@@ -5,7 +5,6 @@ $correo_prof = $_SESSION['correo_usuario'];
 
 $query = "SELECT * FROM public.alumnos WHERE profesor='$correo_prof'";
 $consulta = pg_query($conexion, $query);
-
 ?>
 <!DOCTYPE html>
 <link rel="stylesheet" href="style.css">
@@ -52,13 +51,10 @@ $consulta = pg_query($conexion, $query);
                         </form>
                         <form action="p_menu.php" method="post">
                             <input type="submit" class="submit" value="Regresar">
-                            </nav> 
-
-                            </div>
-
-                            </div>
-
-                            </div>
-                            </div>
-                            </body>
-                            </html>
+                    </nav> 
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
