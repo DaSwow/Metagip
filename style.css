@@ -233,7 +233,7 @@ table.colm1{
 
 td{
     width:10%;
-    height:20px;
+    height:15px;
     text-align:left;
     vertical-align:top;
     border-spacing:0;
@@ -242,19 +242,19 @@ td{
 td.optns{
     border: 0px;
     width: 20px;
-    height: 20px;
+    height: 15px;
 
 }
 
 td.fila{
     background-color:Azure;
     width:30%;
-    height:20px;
+    height:25px;
 
 }
 td.fila1{
     width:15%;
-    height:20px;
+    height:25px;
     background-color:Azure;
 }
 
