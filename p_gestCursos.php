@@ -7,8 +7,10 @@ $query = "SELECT * FROM public.alumnos WHERE profesor='$correo_prof'";
 $consulta = pg_query($conexion, $query);
 ?>
 <!DOCTYPE html>
-<link rel="stylesheet" href="style.css">
-<title>Gestionar Alumnos</title>
+<head>
+    <link rel="stylesheet" href="style.css">
+    <title>Gestionar Alumnos</title>
+    <script src="jquery.min.js"></script>
 </head>
 
 <body>
@@ -21,8 +23,8 @@ $consulta = pg_query($conexion, $query);
                         <form action="s_AgregarCurso.php" method="POST">
                             <input type="text" placeholder="clave" class="clave" name="clave" required>
                             <input type="text" placeholder="nombre" class="nombre" name="nombreCurso" required>
-                            
-                            
+                            <input type="time" id="appt-time"  name="hora-ini" required>
+                            <input type="time" id="appt-time"  name="hora-fin" required>
                             <input type="submit" class="submit" value="Agregar">
                         </form> 
                             <br><br><br>
