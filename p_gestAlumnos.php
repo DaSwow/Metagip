@@ -31,12 +31,12 @@ function editar($id) {
                                 <td><?php echo $row['id']; ?></td>
                                 <td><?php echo $row['nombre']; ?></td>
                                 <td><?php echo $row['correo']; ?></td>
-                                
-                                <a><input type="submit" class="optns" <?php echo 'id=' . $row['id'] ?> value="Editar"></a>
-                                <a href="s_ElimAlumno.php?id=<?php echo $row['id'] ?>" class="optns" value="Editar"><i class="far fa-trash-alt"></i></a>
-                                          <!--<td class="fila2"><p>00000189362</p></td>
-                                          <td class="fila2"><p>Edith </p></td>
-                                          <td class="fila2"><p>asdasdas@gmail.com</p></td>-->
+
+                                <td><input type="submit" class="optns" <?php echo 'id=' . $row['id'] ?> value="Editar"></td>
+                                <td><form action="s_ElimAlumno.php?id=<?php echo $row['id'] ?>" method="post">
+                                        <input type="submit" class="optns" value="Editar">
+                                    </form>
+                                </td>
                             </tr>
                         <?php } ?>
                     </table>
