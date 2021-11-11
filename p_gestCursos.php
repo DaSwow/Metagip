@@ -25,7 +25,9 @@ $consulta = pg_query($conexion, $query);
                             <input type="text" placeholder="Nombre" class="nombre" name="nombreCurso" required>
                             <input type="time" id="appt-time"  name="horaIni" required>
                             <input type="time" id="appt-time2"  name="horaFin" required>
-                            <input type="number" placeholder="Unidades" class="Unidades" name="unidades" required>
+                            <input type="date" id="fechaIni" name="fechaIni"  required>
+                            <input type="date" id="fechaFin"  name="fechaFin" required>
+                            <input type="number" placeholder="Unidades" class="Unidades" name="unidades" min="0" max="8" required>
                             <input type="submit" class="submit" value="Agregar">
                         </form> 
                             <br><br><br>
