@@ -23,8 +23,8 @@ $consulta = pg_query($conexion, $query);
                         <form action="s_AgregarCurso.php" method="POST">
                             <input type="text" placeholder="Clave" class="clave" name="clave" required>
                             <input type="text" placeholder="Nombre" class="nombre" name="nombreCurso" required>
-                            <input type="time" id="appt-time"  name="Hora-ini" required>
-                            <input type="time" id="appt-time"  name="Hora-fin" required>
+                            <input type="time" id="appt-time"  name="horaIni" required>
+                            <input type="time" id="appt-time"  name="horaFin" required>
                             <input type="text" placeholder="Unidades" class="Unidades" name="unidades" required>
                             <input type="submit" class="submit" value="Agregar">
                         </form> 
