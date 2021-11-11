@@ -51,6 +51,7 @@ $consulta = pg_query($conexion, $query);
                         </form>
                         <form action="p_menu.php" method="post">
                             <input type="submit" class="submit" value="Regresar">
+                        </form>
                     </nav> 
                 </div>
             </div>
