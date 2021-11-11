@@ -51,7 +51,7 @@ if (isset($_POST['update'])) {
             <nav class="editAlumno" >
                 <h2>Editar Alumno</h2>
                 <form action="s_editCurso.php?clave=<?php echo $curso[0] ?>" method="post">
-                    <input type="text" placeholder="Clave" class="clave" name="claveAl"  readonly="readonly">
+                    <input type="text" placeholder="Clave" class="clave" name="claveAl"  value="<?php echo $curso[0]; ?>" readonly="readonly">
                     <input type="text" placeholder="Nombre" class="nombre" name="nombreAl"  value="<?php echo $curso[1]; ?>" required>
                     <input type="time" id="appt-time"  name="horaIniAl" value="<?php echo $curso[2]; ?>" required>
                     <input type="time" id="appt-time2"  name="horaFinAl" value="<?php echo $curso[3]; ?>" required>
