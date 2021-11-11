@@ -29,7 +29,7 @@ if (isset($_POST['update'])) {
     if ($horaFinAl < $horaIniAl) {
         echo "<script type='text/javascript'>alert('La hora de fin del curso no puede ser antes que la hora de inicio.');location='p_gestCursos.php';</script>";
     } else {
-        if (!($fechaFin < $fechaIni)) {
+        if (!($fechaFinAl < $fechaIniAl)) {
             $cantidad = pg_num_rows($consulta);
             if ($cantidad === 0) {
                 $queryInsert = "UPDATE public.cursos SET nombre = '$nombre', $stringHoraIni=$horaIniAl, $stringHoraFin=$horaFinAl, $stringFechaIni=$fechaIniAl, $stringFechaFin=$fechaFinAl, unidades=$unidadesAl WHERE clave = '$claveAl'";
