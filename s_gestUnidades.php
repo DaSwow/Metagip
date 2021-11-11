@@ -11,7 +11,7 @@ $i = 0;
 $fechaIni = $_GET['fechaIni'+$i];
 $fechaFin =$_GET['fechaFin'+$i];
 
-echo $fechaIni+","+$fechaFin;
+echo "<script type='text/javascript'>alert('Divisiones registradas exitosamente $fechaFin ,$fechaIni');location='p_gestUnidades.php';</script>";
 
 //for ($i = 0; $i < $cantidadUnidades; $i++) {
   //  $fechaIni = $_GET['fechaIni'%i];
