@@ -4,8 +4,7 @@ session_start();
 $clave=$_GET['clave'];
 $query = "SELECT * FROM public.cursos WHERE claveCurso='$clave';";
 $consulta = pg_query($conexion, $query);
-
-$cantidad = $consulta['unidades'];
+$cantidad = $consulta[4];
 
 
 
