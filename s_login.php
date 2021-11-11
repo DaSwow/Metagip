@@ -17,6 +17,7 @@ echo $cantidad;
 if ($cantidad === 1) {
     $_SESSION["nombre_usuario"]=$nombre[2];
     $_SESSION["correo_usuario"]=$nombre[0];
+    echo "<script type='text/javascript'>location='p_menu.php';</script>";
 } else {
     echo "<script type='text/javascript'>alert('Datos incorrectos');location='index.php';</script>";
 }
