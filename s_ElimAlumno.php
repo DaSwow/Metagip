@@ -4,16 +4,13 @@ session_start();
 
 require 'db.php';
 
-if (isset($_GET['id'])) {
-    $id = $_GET['id'];
-    $query = "DELETE FROM alumnos WHERE id = $id";
-    $result = mysqli_query($conexion, $query);
-    if (!$result) {
-        die("Query Failed.");
-    }
+$id = $_GET['id'];
+$query = "DELETE FROM public.alumnos WHERE id = $id";
+$consulta = pg_query($conexion, $query);
 
-    $_SESSION['message'] = 'Task Removed Successfully';
-    $_SESSION['message_type'] = 'danger';
-    echo "<script type='text/javascript'>location='p_gestAlumnos.php';</script>";
+if (!$consulta) {
+    echo "<script type='text/javascript'>alert('Datos incorrectos');location='p_gestAlumnos.php';</script>";
+} else {
+    echo "<script type='text/javascript'>alert('Alumno eliminado');location='p_gestAlumnos.php';</script>";
 }
 ?>
