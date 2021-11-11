@@ -57,12 +57,12 @@ $consulta = pg_query($conexion, $query);
                                 <td><?php echo $row['unidades']; ?></td>
                                 
                                 <td>
-                                    <form action="s_editAlumno.php?id=<?php echo $row['clave'] ?>" method="post">
+                                    <form action="s_editCurso.php.php?id=<?php echo $row['clave'] ?>" method="post">
                                         <input type="submit" class="optns" value="Editar" onclick="return confirm('¿Desea Editar al alumno?');"/>
                                     </form>
                                 </td>
                                 <td>
-                                    <form action="s_ElimAlumno.php?id=<?php echo $row['clave'] ?>" method="post">
+                                    <form action="s_elimCurso.php?id=<?php echo $row['clave'] ?>" method="post">
                                         <input type="submit" class="optns" value="Borrar" onclick="return confirm('¿Seguro que desea eliminar al curso?');"/>
                                     </form>
                                 </td>
