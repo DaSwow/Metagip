@@ -30,12 +30,9 @@ if (isset($_POST['update'])) {
         echo "<script type='text/javascript'>alert('La hora de fin del curso no puede ser antes que la hora de inicio.');location='p_gestCursos.php';</script>";
     } else {
         if (!($fechaFinAl < $fechaIniAl)) {
-            $cantidad = pg_num_rows($consulta);
-            if ($cantidad === 0) {
                 $queryInsert = "UPDATE public.cursos SET nombre = '$nombre', $stringHoraIni=$horaIniAl, $stringHoraFin=$horaFinAl, $stringFechaIni=$fechaIniAl, $stringFechaFin=$fechaFinAl, unidades=$unidadesAl WHERE clave = '$claveAl'";
                 pg_query($conexion, $queryInsert);
                 echo "<script type='text/javascript'>alert('Actualizacion completa');location='p_gestCursos.php';</script>";
-            }
         } else {
             echo "<script type='text/javascript'>alert('La fecha de fin del curso no puede ser antes que la fecha de inicio.');location='p_gestCursos.php';</script>";
         }
@@ -58,7 +55,7 @@ if (isset($_POST['update'])) {
                     <input type="date" id="fechaIni" name="fechaIniAl"  value="<?php echo $curso[6]; ?>" required>
                     <input type="date" id="fechaFin"  name="fechaFinAl" value="<?php echo $curso[7]; ?>" required>
                     <input type="number" placeholder="Unidades" class="unidades" name="unidadesAl" min="0" max="8" value="<?php echo $curso[4]; ?>" required >
-                    <input type="submit" class="submit" value="Agregar" name="update">
+                    <input type="submit" class="submit" value="Editar" name="update">
                 </form>
             </nav>
         </div>
