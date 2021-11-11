@@ -15,8 +15,7 @@ if (!$consulta) {
 if (isset($_POST['update'])) {
     $nAl = $_POST['nombreAl'];
     $cAl = $_POST['correoAl'];
-    echo "<script type='text/javascript'>alert('$alumno[0]]');</script>";
-    $queryInsert = "UPDATE public.alumnos SET nombre = '$nAl',correo = '$cAl' WHERE id = '$alumno[0]]'";
+    $queryInsert = "UPDATE public.alumnos SET nombre = '$nAl',correo = '$cAl' WHERE id = '$alumno[0]'";
     pg_query($conexion, $queryInsert);
     echo "<script type='text/javascript'>alert('Actualizacion completa');location='p_gestAlumnos.php';</script>";
 }
