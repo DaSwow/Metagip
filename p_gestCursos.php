@@ -17,7 +17,7 @@ $consulta = pg_query($conexion, $query);
     <div class="container">
         <div class="table-container2">
             <div class="menu" >
-                <div id="scroll">
+                <div id="scroll" style="margin-right:  15px;">
                     <h2>Gestionar Cursos</h2>
                     <nav>
                         <form action="s_AgregarCurso.php" method="POST">
@@ -49,7 +49,7 @@ $consulta = pg_query($conexion, $query);
                     <br>
                 </div>
             </div>
-            <div class="unidad" style="padding-left:  15px;">
+            <div class="unidad" >
                 <h2>Unidades</h2>
                 <div class="unidad-items">
                     <input type="text" placeholder="Inicio" class="inicio">
