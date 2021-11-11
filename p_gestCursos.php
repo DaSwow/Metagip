@@ -20,9 +20,11 @@ $consulta = pg_query($conexion, $query);
                     <nav>
                         <form action="">
                             <input type="submit" class="submit" value="Agregar">
-                            <input type="submit" class="submit" value="Editar">
+                            
+                            
+                            <! <input type="submit" class="submit" value="Editar"> 
                             <input type="submit" class="submit" value="Eliminar">
-                            <input type="submit" class="submit" value="Regresar">
+                            <input type="submit" class="submit" value="Regresar"> >
                         </form> 
                     </nav>
                     <table class="colm1"border="1">
