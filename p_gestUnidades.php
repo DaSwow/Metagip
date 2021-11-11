@@ -1,7 +1,7 @@
 <?php
 include 'db.php';
 session_start();
-$clave=$_POST['clave'];
+$clave=$_GET['clave'];
 $query = "SELECT * FROM public.unidades WHERE clave='$clave';";
 $consulta = pg_query($conexion, $query);
 
