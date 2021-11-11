@@ -18,14 +18,17 @@ $consulta = pg_query($conexion, $query);
                 <div id="scroll">
                     <h2>Gestionar Cursos</h2>
                     <nav>
-                        <form action="">
+                        <form action="s_AgregarCurso.php" method="POST">
+                            <input type="text" placeholder="clave" class="clave" name="clave" required>
+                            <input type="text" placeholder="nombre" class="nombre" name="nombreCurso" required>
+                            
+                            
                             <input type="submit" class="submit" value="Agregar">
-                            
-                            
-                            <! <input type="submit" class="submit" value="Editar"> 
+                        </form> 
+                            <br><br><br>
+                            <input type="submit" class="submit" value="Editar"> 
                             <input type="submit" class="submit" value="Eliminar">
                             <input type="submit" class="submit" value="Regresar"> >
-                        </form> 
                     </nav>
                     <table class="colm1"border="1">
                         <tr>
