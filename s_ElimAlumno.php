@@ -2,7 +2,7 @@
 
 session_start();
 
-include("db.php");
+require 'db.php';
 
 if (isset($_GET['id'])) {
     $id = $_GET['id'];
