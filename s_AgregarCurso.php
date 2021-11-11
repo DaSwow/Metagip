@@ -9,6 +9,9 @@ $horaFin = $_POST['horaFin'];
 $unidades = $_POST['unidades'];
 $correo_profesor = $_SESSION["correo_usuario"];
 
+
+echo $horaIni;
+/*
 if ($horaFin < $horaIni) {
     echo "<script type='text/javascript'>alert('La hora de fin del curso no puede ser antes que la hora de inicio.');location='p_gestCursos.php';</script>";
 } else {
@@ -25,5 +28,5 @@ if ($horaFin < $horaIni) {
         echo "<script type='text/javascript'>alert('Este curso ya esta registrado.');location='p_gestCursos.php';</script>";
     }
 }
-
+*/
 ?>
