@@ -14,8 +14,8 @@ $correo_profesor = $_SESSION["correo_usuario"];
 
 $stringHoraIni = '"' . "horaIni" . '"';
 $stringHoraFin = '"' . "horaFin" . '"';
-$stringFechaIni = '"' . "horaIni" . '"';
-$stringFechaFin = '"' . "horaFin" . '"';
+$stringFechaIni = '"' . "fechaIni" . '"';
+$stringFechaFin = '"' . "fechaFin" . '"';
 
 
 if ($horaFin < $horaIni) {
