@@ -28,10 +28,8 @@ $consulta = pg_query($conexion, $query);
                                 <td><?php echo $row['id']; ?></td>
                                 <td><?php echo $row['nombre']; ?></td>
                                 <td><?php echo $row['correo']; ?></td>
-
-                                <td><input type="submit" class="optns" value="Editar"></td>
                                 <td>
-                                    <form action="s_editAlumno.php?id=<?php echo 'id='.$row['id'] ?>" method="post">
+                                    <form action="s_editAlumno.php?id=<?php echo $row['id'] ?>" method="post">
                                         <input type="submit" class="optns" value="Editar" onclick="return confirm('Desea Editar al alumno?');"/>
                                     </form>
                                 </td>
