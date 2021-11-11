@@ -14,6 +14,6 @@ if (isset($_GET['id'])) {
 
     $_SESSION['message'] = 'Task Removed Successfully';
     $_SESSION['message_type'] = 'danger';
-    header('Location: p_gestAlumnos.php');
+    echo "<script type='text/javascript'>location='p_gestAlumnos.php';</script>";
 }
 ?>
