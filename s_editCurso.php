@@ -47,7 +47,7 @@ if (isset($_POST['update'])) {
 <title>Editar Alumno</title>
 <body>
     <div class="container" >
-        <div class="menu" style="margin-right:  100%; margin-bottom: 50%;" >
+        <div class="menu" style="margin-right:  100%; margin-bottom: 90%;" >
             <nav class="editAlumno" >
                 <h2>Editar Alumno</h2>
                 <form action="s_editCurso.php?clave=<?php echo $curso[0] ?>" method="post">
