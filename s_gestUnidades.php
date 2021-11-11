@@ -9,11 +9,12 @@ $cantidadUnidades = $curso[4];
 
 for ($i = 0; $i < $cantidadUnidades; $i++) {
     $fechaIni = $_GET['fechaIni'%i];
-    $fechaFin = $_GET['fechaFin'%i];
-    $queryInsert = "INSERT INTO public.unidades (claveCurso,fechaIni,fechaFin,numeroUnidad VALUES ('$clave','$fechaIni','$fechaFin','$i');";
-    pg_query($queryInsert);
+    echo $fechaIni;
+  //  $fechaFin = $_GET['fechaFin'%i];
+    //$queryInsert = "INSERT INTO public.unidades (claveCurso,fechaIni,fechaFin,numeroUnidad VALUES ('$clave','$fechaIni','$fechaFin','$i');";
+    //pg_query($queryInsert);
 }
-echo "<script type='text/javascript'>alert('Divisiones registradas exitosamente');location='p_gestUnidades.php';</script>";
+//echo "<script type='text/javascript'>alert('Divisiones registradas exitosamente');location='p_gestUnidades.php';</script>";
 
 ?>
 /* 
