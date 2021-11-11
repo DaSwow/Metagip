@@ -36,7 +36,7 @@ $cantidadUnidades=$curso[4];
                     </tr>
                     <?php for ($i=0; $i<$cantidadUnidades; $i++) { ?>
                         <tr>
-                            <td><?php $i+1?></td>
+                            <td><?php echo $i+1; ?></td>
                             <td><?php echo "fechaIni"; ?></td>
                             <td><?php echo "fechaFin"; ?></td>
                         </tr>
