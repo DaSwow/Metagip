@@ -33,8 +33,8 @@ function editar($id) {
                                 <td><?php echo $row['correo']; ?></td>
 
                                 <td><input type="submit" class="optns" <?php echo $row['id'] ?> value="Editar"></td>
-                                <td href="s_ElimAlumno.php?id=<?php echo $row['id'] ?>" class="btn btn-danger">
-                                        <input type="submit" class="optns" value="Eliminar">
+                                <td> <a href="s_ElimAlumno.php?id=<?php echo $row['id'] ?>">
+                                        <input type="submit" class="optns" value="Eliminar"></a>
                                 </td>
                             </tr>
                         <?php } ?>
