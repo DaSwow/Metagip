@@ -13,7 +13,7 @@ for ($i = 0; $i < $cantidadUnidades; $i++) {
     $queryInsert = "INSERT INTO public.unidades (claveCurso,fechaIni,fechaFin,numeroUnidad VALUES ('$clave','$fechaIni','$fechaFin','$i');";
     pg_query($queryInsert);
 }
-echo "hola";
+echo "<script type='text/javascript'>alert('Divisiones registradas exitosamente');location='p_gestUnidades.php';</script>";
 
 ?>
 /* 
