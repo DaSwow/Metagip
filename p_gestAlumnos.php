@@ -6,8 +6,8 @@ $correo_prof = $_SESSION['correo_usuario'];
 $query = "SELECT * FROM public.alumnos WHERE profesor='$correo_prof'";
 $consulta = pg_query($conexion, $query);
 
-function editar($id) {
-    
+function confirmacion() {
+    echo "<script>if(confirm('Deseas continuar?')){}else{ alert('Operacion Cancelada');}</script>";
 }
 ?>
 <!DOCTYPE html>
@@ -35,7 +35,7 @@ function editar($id) {
                                 <td><input type="submit" class="optns" value="Editar"></td>
                                 <td>
                                     <form action="s_ElimAlumno.php?id=<?php echo $row['id'] ?>" method="post">
-                                        <input type="submit" class="optns" value="Borrar">
+                                        <input type="submit" class="optns" value="Borrar" onclick="confirmacion()">
                                     </form>
                                 </td>
                             </tr>
