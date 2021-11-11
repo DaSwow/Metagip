@@ -21,10 +21,11 @@ $consulta = pg_query($conexion, $query);
                     <h2>Gestionar Cursos</h2>
                     <nav>
                         <form action="s_AgregarCurso.php" method="POST">
-                            <input type="text" placeholder="clave" class="clave" name="clave" required>
-                            <input type="text" placeholder="nombre" class="nombre" name="nombreCurso" required>
-                            <input type="time" id="appt-time"  name="hora-ini" required>
-                            <input type="time" id="appt-time"  name="hora-fin" required>
+                            <input type="text" placeholder="Clave" class="clave" name="clave" required>
+                            <input type="text" placeholder="Nombre" class="nombre" name="nombreCurso" required>
+                            <input type="time" id="appt-time"  name="Hora-ini" required>
+                            <input type="time" id="appt-time"  name="Hora-fin" required>
+                            <input type="text" placeholder="Unidades" class="Unidades" name="unidades" required>
                             <input type="submit" class="submit" value="Agregar">
                         </form> 
                             <br><br><br>
