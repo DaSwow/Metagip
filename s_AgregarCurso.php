@@ -19,7 +19,7 @@ $stringFechaFin = '"' . "fechaFin" . '"';
 
 
 if ($horaFin < $horaIni) {
-    
+    echo "<script type='text/javascript'>alert('La hora de fin del curso no puede ser antes que la hora de inicio.');location='p_gestCursos.php';</script>";
 } else {
     if (! ($fechaFin < $fechaIni)) {
         

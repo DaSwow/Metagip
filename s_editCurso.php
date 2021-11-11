@@ -13,11 +13,33 @@ if (!$consulta) {
 }
 
 if (isset($_POST['update'])) {
-    $nAl = $_POST['nombreAl'];
-    $cAl = $_POST['correoAl'];
-    $queryInsert = "UPDATE public.alumnos SET nombre = '$nAl',correo = '$cAl' WHERE id = '$alumno[0]'";
-    pg_query($conexion, $queryInsert);
-    echo "<script type='text/javascript'>alert('Actualizacion completa');location='p_gestCursos.php';</script>";
+    $claveAl = $_POST['claveAl'];
+    $nombreAl = $_POST['nombreAl'];
+    $horaIniAl = $_POST['horaIniAl'];
+    $horaFinAl = $_POST['horaFinAl'];
+    $fechaIniAl = $_POST['fechaIniAl'];
+    $fechaFinAl = $_POST['fechaFinAl'];
+    $unidadesAl = $_POST['unidadesAl'];
+
+    $stringHoraIni = '"' . "horaIni" . '"';
+    $stringHoraFin = '"' . "horaFin" . '"';
+    $stringFechaIni = '"' . "fechaIni" . '"';
+    $stringFechaFin = '"' . "fechaFin" . '"';
+
+    if ($horaFinAl < $horaIniAl) {
+        echo "<script type='text/javascript'>alert('La hora de fin del curso no puede ser antes que la hora de inicio.');location='p_gestCursos.php';</script>";
+    } else {
+        if (!($fechaFin < $fechaIni)) {
+            $cantidad = pg_num_rows($consulta);
+            if ($cantidad === 0) {
+                $queryInsert = "UPDATE public.cursos SET nombre = '$nombre', $stringHoraIni=$horaIniAl, $stringHoraFin=$horaFinAl, $stringFechaIni=$fechaIniAl, $stringFechaFin=$fechaFinAl, unidades=$unidadesAl WHERE clave = '$claveAl'";
+                pg_query($conexion, $queryInsert);
+                echo "<script type='text/javascript'>alert('Actualizacion completa');location='p_gestCursos.php';</script>";
+            }
+        } else {
+            echo "<script type='text/javascript'>alert('La fecha de fin del curso no puede ser antes que la fecha de inicio.');location='p_gestCursos.php';</script>";
+        }
+    }
 }
 ?>
 <!DOCTYPE html>
@@ -29,14 +51,14 @@ if (isset($_POST['update'])) {
             <nav class="editAlumno">
                 <h2>Editar Alumno</h2>
                 <form action="s_editCurso.php?clave=<?php echo $curso[0] ?>" method="post">
-                            <input type="text" placeholder="Clave" class="clave" name="clave"  readonly="readonly">
-                            <input type="text" placeholder="Nombre" class="nombre" name="nombreCurso"  value="<?php echo $curso[1]; ?>" required>
-                            <input type="time" id="appt-time"  name="horaIni" value="<?php echo $curso[2]; ?>" required>
-                            <input type="time" id="appt-time2"  name="horaFin" value="<?php echo $curso[3]; ?>" required>
-                            <input type="date" id="fechaIni" name="fechaIni"  value="<?php echo $curso[4]; ?>" required>
-                            <input type="date" id="fechaFin"  name="fechaFin" value="<?php echo $curso[5]; ?>" required>
-                            <input type="number" placeholder="Unidades" class="Unidades" name="unidades" min="0" max="8" value="<?php echo $curso[6]; ?>" required >
-                            <input type="submit" class="submit" value="Agregar" name="update">
+                    <input type="text" placeholder="Clave" class="clave" name="claveAl"  readonly="readonly">
+                    <input type="text" placeholder="Nombre" class="nombre" name="nombreAl"  value="<?php echo $curso[1]; ?>" required>
+                    <input type="time" id="appt-time"  name="horaIniAl" value="<?php echo $curso[2]; ?>" required>
+                    <input type="time" id="appt-time2"  name="horaFinAl" value="<?php echo $curso[3]; ?>" required>
+                    <input type="date" id="fechaIni" name="fechaIniAl"  value="<?php echo $curso[4]; ?>" required>
+                    <input type="date" id="fechaFin"  name="fechaFinAl" value="<?php echo $curso[5]; ?>" required>
+                    <input type="number" placeholder="Unidades" class="unidades" name="unidadesAl" min="0" max="8" value="<?php echo $curso[6]; ?>" required >
+                    <input type="submit" class="submit" value="Agregar" name="update">
                 </form>
             </nav>
         </div>
