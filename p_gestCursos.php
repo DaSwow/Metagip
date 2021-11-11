@@ -67,7 +67,7 @@ $consulta = pg_query($conexion, $query);
                                     </form>
                                 </td>
                                 <td>
-                                    <form action="s_elimCurso.php?clave=<?php echo $row['clave'] ?>" method="post">
+                                    <form action="p_gestUnidades.php?clave=<?php echo $row['clave'] ?>" method="post">
                                         <input type="submit" class="optns" value="Unidades"/>
                                     </form>
                                 </td>
@@ -77,23 +77,7 @@ $consulta = pg_query($conexion, $query);
                     <br>
                 </div>
             </div>
-            <div class="unidad" >
-                <h2>Unidades</h2>
-                <div class="unidad-items">
-                     <table class="colm1" border="1">
-                        <tr>
-                            <td class="fila1"><p>Fecha Inicio</p></td>
-                            <td class="fila"><p>Fecha Fin</p></td>
-                        </tr>
-                        <?php while ($row = pg_fetch_assoc($consulta)) { ?>
-                            <tr>
-                                <td><?php echo $row['fechaIni']; ?></td>
-                                <td><?php echo $row['fechaFin']; ?></td>
-                            </tr>
-                        <?php } ?>
-                    </table>
-                </div>
-            </div>
         </div>
+    </div>
 </body>
 </html>
