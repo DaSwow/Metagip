@@ -5,6 +5,11 @@ $correo_prof = $_SESSION['correo_usuario'];
 
 $query = "SELECT * FROM public.alumnos WHERE profesor='$correo_prof'";
 $consulta = pg_query($conexion, $query);
+
+function editar($id){
+    
+}
+
 ?>
 <!DOCTYPE html>
 <link rel="stylesheet" href="style.css">
@@ -27,7 +32,7 @@ $consulta = pg_query($conexion, $query);
                                 <td><?php echo $row['id']; ?></td>
                                 <td><?php echo $row['nombre']; ?></td>
                                 <td><?php echo $row['correo']; ?></td>
-                                <td><input type="submit" class="optns" value="Editar"></td>
+                                <td><input type="submit" class="optns"  <?php echo 'id=' .$row['id'] ?> value="Editar"></td>
                                 <td><input type="submit" class="optns" value="Elimar"></td>
                             <!--<td class="fila2"><p>00000189362</p></td>
                             <td class="fila2"><p>Edith </p></td>
