@@ -156,10 +156,13 @@ body{
 
 .menu h2{
     color: black;
-    margin-bottom: 45px;
     font-size:30px;
     margin-left:20px;
 
+}
+
+.menu h3{
+    margin-bottom: 20px;
 }
 
 .menu input{
