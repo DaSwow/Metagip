@@ -24,17 +24,17 @@ if (isset($_POST['update'])) {
 <link rel="stylesheet" href="style.css">
 <title>Editar Alumno</title>
 <body>
-    <div class="container">
+    <div class="container" style="margin-right: 50%;">
         <div class="menu" >
             <nav class="editAlumno">
                 <h2>Editar Alumno</h2>
                 <form action="s_editCurso.php?clave=<?php echo $curso[0] ?>" method="post">
                             <input type="text" placeholder="Clave" class="clave" name="clave"  readonly="readonly">
-                            <input type="text" placeholder="Nombre" class="nombre" name="nombreCurso"  value="<?php echo $alumno[1]; ?>" required>
-                            <input type="time" id="appt-time"  name="horaIni" value="<?php echo $alumno[2]; ?>" required>
-                            <input type="time" id="appt-time2"  name="horaFin" value="<?php echo $alumno[3]; ?>" required>
+                            <input type="text" placeholder="Nombre" class="nombre" name="nombreCurso"  value="<?php echo $curso[1]; ?>" required>
+                            <input type="time" id="appt-time"  name="horaIni" value="<?php echo $curso[2]; ?>" required>
+                            <input type="time" id="appt-time2"  name="horaFin" value="<?php echo $curso[3]; ?>" required>
                             <input type="date" id="fechaIni" name="fechaIni"  value="<?php echo $alumno[4]; ?>" required>
-                            <input type="date" id="fechaFin"  name="fechaFin" value="<?php echo $alumno[5]; ?>" required>
+                            <input type="date" id="fechaFin"  name="fechaFin" value="<?php echo $curso[5]; ?>" required>
                             <input type="number" placeholder="Unidades" class="Unidades" name="unidades" min="0" max="8" value="<?php echo $alumno[6]; ?>" required >
                             <input type="submit" class="submit" value="Agregar" name="update">
                 </form>
