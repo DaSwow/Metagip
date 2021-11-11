@@ -24,14 +24,15 @@ $consulta = pg_query($conexion, $query);
                             <input type="text" placeholder="Clave" class="clave" name="clave" required>
                             <input type="text" placeholder="Nombre" class="nombre" name="nombreCurso" required>
                             <input type="time" id="appt-time"  name="horaIni" required>
-                            <input type="time" id="appt-time"  name="horaFin" required>
+                            <input type="time" id="appt-time2"  name="horaFin" required>
                             <input type="number" placeholder="Unidades" class="Unidades" name="unidades" required>
                             <input type="submit" class="submit" value="Agregar">
                         </form> 
                             <br><br><br>
-                            <input type="submit" class="submit" value="Editar"> 
-                            <input type="submit" class="submit" value="Eliminar">
-                            <input type="submit" class="submit" value="Regresar"> 
+
+                            <form action="p_menu.php" method="post">
+                                <input type="submit" class="submit" value="Regresar">
+                            </form>
                     </nav>
                     <table class="colm1"border="1">
                         <tr>
