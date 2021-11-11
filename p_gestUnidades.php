@@ -33,10 +33,10 @@ $cantidadUnidades = $curso[4];
                     <?php } ?>
                 </table>
             </div>
-        </div>
+        </div> <form action="p_gestCursos.php" method="post">
+            <input type="submit" class="submit" value="Regresar">
+        </form>
     </div>
-    <form action="p_gestCursos.php" method="post">
-        <input type="submit" class="submit" value="Regresar">
-    </form>
+
 </body>
 </html>
