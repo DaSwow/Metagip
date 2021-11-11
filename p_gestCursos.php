@@ -42,9 +42,32 @@ $consulta = pg_query($conexion, $query);
                             <td class="fila"><p>Nombre</p></td>
                             <td class="fila"><p>Hora-Inicio</p></td>
                             <td class="fila"><p>Hora-Fin</p></td>
+                            <td class="fila"><p>Fecha-Inicio</p></td>
+                            <td class="fila"><p>Fecha-Fin</p></td>
                             <td class="fila"><p>Unidades</p></td>
                         </tr>
-
+                        <?php while ($row = pg_fetch_assoc($consulta)) { ?>
+                            <tr>
+                                <td><?php echo $row['clave']; ?></td>
+                                <td><?php echo $row['nombre']; ?></td>
+                                <td><?php echo $row['horaIni']; ?></td>
+                                <td><?php echo $row['horaFin']; ?></td>
+                                <td><?php echo $row['fechaIni']; ?></td>
+                                <td><?php echo $row['fechaFin']; ?></td>
+                                <td><?php echo $row['unidades']; ?></td>
+                                
+                                <td>
+                                    <form action="s_editAlumno.php?id=<?php echo $row['clave'] ?>" method="post">
+                                        <input type="submit" class="optns" value="Editar" onclick="return confirm('¿Desea Editar al alumno?');"/>
+                                    </form>
+                                </td>
+                                <td>
+                                    <form action="s_ElimAlumno.php?id=<?php echo $row['clave'] ?>" method="post">
+                                        <input type="submit" class="optns" value="Borrar" onclick="return confirm('¿Seguro que desea eliminar al curso?');"/>
+                                    </form>
+                                </td>
+                            </tr>
+                        <?php } ?>
                     </table>
                     <br>
                 </div>

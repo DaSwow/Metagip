@@ -28,7 +28,7 @@ if ($horaFin < $horaIni) {
         $cantidad = pg_num_rows($consulta);
         if ($cantidad === 0) {
             $queryInsert = "INSERT INTO public.cursos(
-	clave, nombre, $stringHoraIni, $stringHoraFin,$stringFechaIni, $stringFechaFin ,cursos, profesor)
+	clave, nombre, $stringHoraIni, $stringHoraFin,$stringFechaIni, $stringFechaFin ,unidades, profesor)
 	VALUES ('$clave', '$nombreCurso',  '$horaIni', '$horaFin', '$fechaIni','$fechaFin',$unidades, '$correo_profesor');";
             pg_query($queryInsert);
             echo "<script type='text/javascript'>alert('Curso registrado exitosamente');location='p_gestCursos.php';</script>";
