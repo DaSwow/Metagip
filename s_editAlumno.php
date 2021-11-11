@@ -12,7 +12,7 @@ if (!$consulta) {
     echo "<script type='text/javascript'>alert('Error de coneccion');location='p_gestAlumnos.php';</script>";
 }
 
-function updateAlm() {
+if (isset($_POST['update'])) {
     $nAl = $_POST['nombreAl'];
     $cAl = $_POST['correoAl'];
     $queryInsert = "UPDATE FROM public.alumnos (nombre,correo) VALUES ('$nAl','$cAl') WHERE id = '$alumno[0]]'";
@@ -25,18 +25,16 @@ function updateAlm() {
 <title>Editar Alumno</title>
 <body>
     <div class="container">
-        <div class="table-container2">
-            <div class="menu" >
-                <nav class="editAlumno">
-                    <h2>Editar Alumno</h2>
-                    <form action="s_editAlumno.php" method="post">
-                        <input type="test" placeholder="ID" class="id" name="idAl" value="<?php echo $alumno[0]; ?>" readonly="readonly">
-                        <input type="text" placeholder="nombre" class="nombre" name="nombreAl" value="<?php echo $alumno[1]; ?>" required>
-                        <input type="text" placeholder="correo" class="correo" name="correoAl" value="<?php echo $alumno[2]; ?>" required>
-                        <input type="submit" class="submit" value="actualizar" name="update" onclick="updateAlm()">
-                    </form>
-                </nav>
-            </div>
+        <div class="menu" >
+            <nav class="editAlumno">
+                <h2>Editar Alumno</h2>
+                <form action="s_editAlumno.php?update=<?php echo $alumno[0] ?>" method="post">
+                    <input type="test" placeholder="ID" class="id" name="idAl" value="<?php echo $alumno[0]; ?>" readonly="readonly">
+                    <input type="text" placeholder="nombre" class="nombre" name="nombreAl" value="<?php echo $alumno[1]; ?>" required>
+                    <input type="text" placeholder="correo" class="correo" name="correoAl" value="<?php echo $alumno[2]; ?>" required>
+                    <input type="submit" class="submit" value="actualizar" name="update">
+                </form>
+            </nav>
         </div>
     </div>
 </body>
