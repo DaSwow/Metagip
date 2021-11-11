@@ -8,7 +8,7 @@
         <div class="table-container2">
             <div class="menu" >
                 <div id="scroll">
-                    <h2>Gestionar Curso</h2>
+                    <h2>Gestionar Cursos</h2>
                     <nav>
                         <form action="">
                             <input type="submit" class="submit" value="Editar">
