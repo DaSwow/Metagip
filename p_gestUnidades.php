@@ -2,7 +2,7 @@
 include 'db.php';
 session_start();
 $clave=$_GET['clave'];
-$query = "SELECT * FROM public.cursos WHERE claveCurso='$clave';";
+$query = "SELECT * FROM public.cursos WHERE clave='$clave';";
 $consulta = pg_query($conexion, $query);
 $cantidad = $consulta[4];
 
