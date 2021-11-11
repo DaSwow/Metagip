@@ -25,8 +25,8 @@ $consulta = pg_query($conexion, $query);
                             <input type="text" placeholder="Nombre" class="nombre" name="nombreCurso" required>
                             <input type="time" id="appt-time"  name="horaIni" required>
                             <input type="time" id="appt-time"  name="horaFin" required>
-                            <input type="text" placeholder="Unidades" class="Unidades" name="unidades" required>
-                            <input type="number" class="submit" value="Agregar">
+                            <input type="number" placeholder="Unidades" class="Unidades" name="unidades" required>
+                            <input type="submit" class="submit" value="Agregar">
                         </form> 
                             <br><br><br>
                             <input type="submit" class="submit" value="Editar"> 
