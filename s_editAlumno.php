@@ -28,7 +28,7 @@ if (isset($_POST['update'])) {
         <div class="menu" >
             <nav class="editAlumno">
                 <h2>Editar Alumno</h2>
-                <form action="s_editAlumno.php?update=<?php echo $alumno[0] ?>" method="post">
+                <form action="s_editAlumno.php?id=<?php echo $alumno[0] ?>" method="post">
                     <input type="test" placeholder="ID" class="id" name="idAl" value="<?php echo $alumno[0]; ?>" readonly="readonly">
                     <input type="text" placeholder="nombre" class="nombre" name="nombreAl" value="<?php echo $alumno[1]; ?>" required>
                     <input type="text" placeholder="correo" class="correo" name="correoAl" value="<?php echo $alumno[2]; ?>" required>
