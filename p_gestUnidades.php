@@ -24,13 +24,13 @@ $cantidadUnidades = $curso[4];
                         <td class="fila1"><p>Fecha Inicio</p></td>
                         <td class="fila"><p>Fecha Fin</p></td>
                     </tr>
-<?php for ($i = 0; $i < $cantidadUnidades; $i++) { ?>
+                    <?php for ($i = 0; $i < $cantidadUnidades; $i++) { ?>
                         <tr>
                             <td><?php echo $i + 1; ?></td>
                             <td><?php echo "fechaIni"; ?></td>
                             <td><?php echo "fechaFin"; ?></td>
                         </tr>
-<?php } ?>
+                    <?php } ?>
                 </table>
             </div>
         </div>
