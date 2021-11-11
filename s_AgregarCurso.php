@@ -12,7 +12,7 @@ $correo_profesor = $_SESSION["correo_usuario"];
 if ($horaFin < $horaIni) {
     echo "<script type='text/javascript'>alert('La hora de fin del curso no puede ser antes que la hora de inicio.');location='p_gestCursos.php';</script>";
 } else {
-    $query ="SELECT * FROM public.curso WHERE clave='$clave'";
+    $query ="SELECT * FROM public.cursos WHERE clave='$clave'";
     $consulta = pg_query($conexion, $query);
     $cantidad = pg_num_rows($consulta);
     if ($cantidad === 0) {
