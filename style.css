@@ -167,7 +167,7 @@ body{
   padding: 5px;
   font-size: 16px;
   margin-bottom: 10px;
-  margin-left:45px;
+  margin-left:10px;
   border-top-style: none;
   border-left-style: none;
   border-right-style: none;
@@ -175,10 +175,29 @@ body{
   color: #333;
 
 }
- 
-.menu .submit{
-  width: 150px;
+
+.menu .optb{
+  width: 55px;
+  display: inline-block;
+  border: 0;
+}
+
+.menu .optns{
+  width: 50px;
+  height: 25px;
   padding: 10px;
+  background: #A9E2F3;
+  color: black;
+  font-size: 12px;
+  alignment-adjust: central;
+  box-shadow: 0 0 3px 0 rgba(0, 0, 0, .2);
+  cursor: pointer;
+  
+}
+
+.menu .submit{
+  width: 80px;
+  height: 25px;
   background: #A9E2F3;
   color: black;
   font-size: 12px;
