@@ -6,14 +6,19 @@ $query = "SELECT * FROM public.cursos WHERE clave='$clave';";
 $consulta = pg_query($conexion, $query);
 $curso = pg_fetch_row($consulta);
 $cantidadUnidades = $curso[4];
+$i = 0;
 
-for ($i = 0; $i < $cantidadUnidades; $i++) {
-    $fechaIni = $_GET['fechaIni'%i];
-    echo $fechaIni;
+$fechaIni = $_GET['fechaIni'+$i];
+$fechaFin =$_GET['fechaFin'+$i];
+
+echo $fechaIni+","+$fechaFin;
+
+//for ($i = 0; $i < $cantidadUnidades; $i++) {
+  //  $fechaIni = $_GET['fechaIni'%i];
   //  $fechaFin = $_GET['fechaFin'%i];
     //$queryInsert = "INSERT INTO public.unidades (claveCurso,fechaIni,fechaFin,numeroUnidad VALUES ('$clave','$fechaIni','$fechaFin','$i');";
     //pg_query($queryInsert);
-}
+//}
 //echo "<script type='text/javascript'>alert('Divisiones registradas exitosamente');location='p_gestUnidades.php';</script>";
 
 ?>
