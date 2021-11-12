@@ -5,9 +5,12 @@
         <group>
             <file>file:/S:/Dev%20Kits/GitProjects/Web/Metagip/style.css</file>
             <file>file:/S:/Dev%20Kits/GitProjects/Web/Metagip/index.php</file>
+            <file>file:/S:/Dev%20Kits/GitProjects/Web/Metagip/s_editCurso.php</file>
             <file>file:/S:/Dev%20Kits/GitProjects/Web/Metagip/p_gestCursos.php</file>
             <file>file:/S:/Dev%20Kits/GitProjects/Web/Metagip/s_login.php</file>
-            <file>file:/S:/Dev%20Kits/GitProjects/Web/Metagip/db.php</file>
+            <file>file:/S:/Dev%20Kits/GitProjects/Web/Metagip/s_editAlumno.php</file>
+            <file>file:/S:/Dev%20Kits/GitProjects/Web/Metagip/s_ElimAlumno.php</file>
+            <file>file:/S:/Dev%20Kits/GitProjects/Web/Metagip/p_gestUnidades.php</file>
             <file>file:/S:/Dev%20Kits/GitProjects/Web/Metagip/p_menu.php</file>
             <file>file:/S:/Dev%20Kits/GitProjects/Web/Metagip/p_gestAlumnos.php</file>
         </group>
