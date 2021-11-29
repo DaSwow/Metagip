@@ -1,7 +1,5 @@
 <?php
-
 session_start();
-
 ?>
 
 <!DOCTYPE html>
@@ -18,7 +16,7 @@ session_start();
             <div class="menu-container">
                 <div class="menu">
                     <h2>Menu Principal</h2>
-                    <h3><?php echo 'bienvenido ' .$_SESSION["nombre_usuario"]; ?></h3>
+                    <h3><?php echo 'bienvenido ' . $_SESSION["nombre_usuario"]; ?></h3>
                     <form action="">
                         <input type="submit" class="submnit" formaction="p_gestAlumnos.php" value="Gestionar Alumnos">
                         <input type="submit" class="submnit" formaction="p_gestCursos.php" value="Gestionar Cursos">

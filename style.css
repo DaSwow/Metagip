@@ -239,15 +239,15 @@ table.colm1{
 del html registrar alumnos
 */
 table.table2{
-background-color:#fff;
-caption-side:bottom;
-margin-top: 50px;
-border-collapse: separate;
-empty-cells:hide;
-height:20%;
-position: relative;
-superior: 150px;
-overflow:scroll;
+    background-color:#fff;
+    caption-side:bottom;
+    margin-top: 50px;
+    border-collapse: separate;
+    empty-cells:hide;
+    height:20%;
+    position: relative;
+    superior: 150px;
+    overflow:scroll;
 }
 
 td{
@@ -292,8 +292,8 @@ nav{
 del html registrar alumnos
 */
 #btn{
-	height:-10px;
-	left:980px;
+    height:-10px;
+    left:980px;
 }
 
 nav.editAlumno{
@@ -315,16 +315,16 @@ nav.editAlumno{
 del html registrar alumnos
 */
 #scroll2{
-overflow:scroll;
-height:450px;
-width:850px;
+    overflow:scroll;
+    height:450px;
+    width:850px;
 }
 
 /*** 
 del html registrar alumnos
 */
 #scroll2 table{
-width:800px;
+    width:800px;
 }
 
 .table-container2{
@@ -338,11 +338,11 @@ width:800px;
 del html registrar alumnos
 */
 .table-container3{
-  display: flex;
-  width: 1200px;
-  height: 700px;
-  background: #fff;
-  box-shadow: 0 1px 1px 0 rgba(0, 0, 0, .2);
+    display: flex;
+    width: 1200px;
+    height: 700px;
+    background: #fff;
+    box-shadow: 0 1px 1px 0 rgba(0, 0, 0, .2);
 }
 
 .unidad{
@@ -387,89 +387,89 @@ del html registrar alumnos
 del html registrar alumnos
 */
 #cbox{
-height:20px;
-width:20px;
+    height:20px;
+    width:20px;
 }
 /*** 
 del html registrar alumnos
 */
 .cursos{
-  width: 100%;
-  height: 20px;
-  padding: 20px;
-  display: flex;
-  margin-top: 30px;
-  background-color:#c2b0f2;
+    width: 100%;
+    height: 20px;
+    padding: 20px;
+    display: flex;
+    margin-top: 30px;
+    background-color:#c2b0f2;
 }
 /*** 
 del html registrar alumnos
 */
 .buscador{
-  width: 100%;
-  height: 10px;
-  padding: 20px;
-  display: flex;
-  margin-top: 60px;
-  background-color:#fff;
+    width: 100%;
+    height: 10px;
+    padding: 20px;
+    display: flex;
+    margin-top: 60px;
+    background-color:#fff;
 }
 /*** 
 del html registrar alumnos
 */
 .cursos input{
-  width: 15%;
-  padding: 5px;
-  float:left;
-  font-size: 16px;
-  margin-bottom: 6px;
-  border-top-style: none;
-  border-left-style: none;
-  border-right-style: none;
-  border-bottom: 1px solid #a8a8a8;
-  color: #333;
+    width: 15%;
+    padding: 5px;
+    float:left;
+    font-size: 16px;
+    margin-bottom: 6px;
+    border-top-style: none;
+    border-left-style: none;
+    border-right-style: none;
+    border-bottom: 1px solid #a8a8a8;
+    color: #333;
 }
 /*** 
 del html registrar alumnos
 */
 .cursos select{
-  width: 70%;
-  padding: 5px;
-  font-size: 16px;
-  margin-bottom: 5px;
-  margin-left: 10px;
-  border-top-style: none;
-  border-left-style: none;
-  border-right-style: none;
-  border-bottom: 1px solid #a8a8a8;
-  color: #333;
+    width: 70%;
+    padding: 5px;
+    font-size: 16px;
+    margin-bottom: 5px;
+    margin-left: 10px;
+    border-top-style: none;
+    border-left-style: none;
+    border-right-style: none;
+    border-bottom: 1px solid #a8a8a8;
+    color: #333;
 }
 /*** 
 del html registrar alumnos
 */
 .buscador input{
-  width: 15%;
-  padding: 5px;
-  float:left;
-  font-size: 16px;
-  border-top-style: none;
-  border-left-style: none;
-  border-right-style: none;
-  border-bottom: 1px solid black;
-  color: #333;
+    width: 15%;
+    padding: 5px;
+    float:left;
+    font-size: 16px;
+    border-top-style: none;
+    border-left-style: none;
+    border-right-style: none;
+    border-bottom: 1px solid black;
+    color: #333;
 }
 /*** 
 del html registrar alumnos
 */
 .buscador select{
-  width: 70%;
-  padding: 5px;
-  font-size: 16px;
-  margin-bottom: 25px;
-  margin-left: 10px;
-  border-top-style: none;
-  border-left-style: none;
-  border-right-style: none;
-  border-bottom: 1px solid #a8a8a8;
-  color: #333;
+    width: 70%;
+    padding: 5px;
+    font-size: 16px;
+    margin-bottom: 25px;
+    margin-left: 10px;
+    border-top-style: none;
+    border-left-style: none;
+    border-right-style: none;
+    border-bottom: 1px solid #a8a8a8;
+    color: #333;
 }
 
 
