@@ -32,7 +32,7 @@ if (isset($_POST['update'])) {
         if (!($fechaFinAl < $fechaIniAl)) {
                 $queryInsert = "UPDATE public.cursos SET nombre = '$nombreAl', $stringHoraIni='$horaIniAl', $stringHoraFin='$horaFinAl', $stringFechaIni='$fechaIniAl', $stringFechaFin='$fechaFinAl', unidades=$unidadesAl WHERE clave = '$claveAl'";
                 pg_query($conexion, $queryInsert);
-                echo "<script type='text/javascript'>alert('Actualización completa'); location='s_elimUnidades.php?clave=$claveAl';</script>";
+                echo "<script type='text/javascript'>alert('Actualización completa'); location='s_EliminarUnidades.php?clave=$claveAl';</script>";
         } else {
             echo "<script type='text/javascript'>alert('La fecha de fin del curso no puede ser antes que la fecha de inicio.');location='p_gestCursos.php';</script>";
         }
