@@ -12,9 +12,6 @@ $cantidadUnidades = $curso[4];
 $query = "SELECT * FROM public.unidades WHERE $stringClaveCurso='$clave';";
 $consulta = pg_query($conexion, $query);
 $unidades = pg_fetch_array($consulta);
-
-
-
 ?>
 <!DOCTYPE html>
 <head>
@@ -36,13 +33,13 @@ $unidades = pg_fetch_array($consulta);
                 <?php for ($i = 1; $i <= $cantidadUnidades; $i++) { ?>
                     <tr style="width: 300px; ">
                         <td><?php echo $i; ?></td>
-                        <td><input id="date" name="fechaInicio<?php echo$i?>" type="text" value="<?php echo $unidades[$i-1] ?>" style="width: 200px;" ></td>
-                        <td><input id="date" name="fechaFin<?php echo$i?>"    type="text" value="<?php echo $unidades[$i-1] ?>" style="width: 200px;" ></td>
+                        <td><input id="date" name="fechaInicio<?php echo$i ?>" type="text" value="<?php echo $unidades[$i] ?>" style="width: 200px;" ></td>
+                        <td><input id="date" name="fechaFin<?php echo$i ?>"    type="text" value="<?php echo $unidades[$i+1] ?>" style="width: 200px;" ></td>
                     </tr>
                 <?php } ?>
-                <br>
-            </table>
 
+            </table>
+            <br><br>
             <form action="p_gestCursos.php" method="post">
                 <input type="submit" class="submit" value="Regresar" />
             </form>
