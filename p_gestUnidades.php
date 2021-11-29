@@ -15,7 +15,7 @@ $cantidadUnidades = $curso[4];
 </head>
 <body>
     <div class="container">
-        <div class="unidad">
+        <div class="unidad" style="width: 80%;">
             <h2>Unidades</h2>
             <form class="unidad-items" action="s_agregarUnidades.php"  method="POST">
                 <table class="colm1" border="1">
@@ -33,8 +33,8 @@ $cantidadUnidades = $curso[4];
                     <?php } ?>
                 </table>
                 <br>
-                <input type="hidden" name="cantidadUnidades" value="<?php echo $cantidadUnidades?>">
-                <input type="hidden" name="idCurso" value="<?php echo $curso[0]?>">
+                <input type="hidden" name="cantidadUnidades" value="<?php echo $cantidadUnidades?>" required>
+                <input type="hidden" name="clave" value="<?php echo $clave?>" required>
                 <input type="submit" class="submit" value="Regresar">
             </form>
         </div>
