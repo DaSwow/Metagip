@@ -4,7 +4,7 @@ session_start();
 
 require 'db.php';
 
-$clave = $_GET['claveAl'];
+$clave = $_GET['clave'];
 $stringClave = '"' . "claveCurso" . '"';
 $query = "DELETE FROM public.unidades WHERE $stringClave = '$clave'";
 $consulta = pg_query($conexion, $query);
