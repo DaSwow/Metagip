@@ -27,13 +27,6 @@ $cantidadUnidades = $curso[4];
                         <td class="fila1"><p>Fecha Inicio</p></td>
                         <td class="fila"><p>Fecha Fin</p></td>
                     </tr>
-                    <?php 
-                    
-                    
-                    
-                    
-                    
-                    ?>
                     <?php for ($i = 1; $i <= $cantidadUnidades; $i++) { ?>
                         <tr style="width: 300px; ">
                             <td><?php echo $i; ?></td>

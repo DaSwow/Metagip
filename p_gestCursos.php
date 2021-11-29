@@ -68,7 +68,12 @@ $consulta = pg_query($conexion, $query);
                                 </td>
                                 <td >
                                     <form action="p_gestUnidades.php?clave=<?php echo $row['clave'] ?>" method="post">
-                                        <input type="submit" class="optns" value="Unidades" style="width: 80px;"/>
+                                        <input type="submit" class="optns" value="Editar unidades" style="width: 80px;"/>
+                                    </form>
+                                </td>
+                                <td >
+                                    <form action="p_gestUnidades.php?clave=<?php echo $row['clave'] ?>" method="post">
+                                        <input type="submit" class="optns" value="Ver unidades" style="width: 80px;"/>
                                     </form>
                                 </td>
                             </tr>
