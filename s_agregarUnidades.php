@@ -8,9 +8,9 @@ $consulta = pg_query($conexion, $query);
 $curso = pg_fetch_row($consulta);
 $cantidadUnidades = $_POST['cantidadUnidades'];
 
+$stringClaveCurso = '"' . "claveCurso" . '"';
 $stringFechaIni = '"' . "fechaIni" . '"';
 $stringFechaFin = '"' . "fechaFin" . '"';
-$stringClaveCurso = '"' . "claveCurso" . '"';
 $stringNumeroUnidad = '"' . "numeroUnidad" . '"';
 
 for ($i = 1; $i <= $cantidadUnidades; $i++) {
