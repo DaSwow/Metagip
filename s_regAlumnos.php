@@ -11,7 +11,7 @@ $consulta = pg_query($conexion, $query);
 $cantidad = pg_num_rows($consulta);
     echo $cantidad;
      if ($cantidad === 0) {
-        $queryInsert = "INSERT INTO public.rel_cursos_alumnos($stringClaveCurso, $stringIdAlumno) VALUES ('$clave', '$idAlumno);";
+        $queryInsert = "INSERT INTO public.rel_cursos_alumnos($stringClaveCurso, $stringIdAlumno) VALUES ('$clave', '$idAlumno');";
         pg_query($queryInsert);
         echo "<script type='text/javascript'>alert('Alumn@ registrado al curso exitosamente');location='../p_regAlumnos.php';</script>";
     } else {
