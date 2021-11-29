@@ -23,11 +23,8 @@ $consulta = pg_query($conexion, $query);
                 <div class="buscador">
                     <input type="text" placeholder="ID" class="idC">
                     <select name="nombre">
-                          <?php while ($row = pg_fetch_assoc($consulta)) { ?>
-                        <option value="<?php echo $row['nombre'];?>"><?phpecho $row['nombre'];?></option>
-                       <!-- <option value="a1">Jesus Edith Carballo Herrera</option>
-                        <option value="a2">Hiram Rodriguez</option>-->
-                        <?php } ?>
+                        <option value="a1">Jesus Edith Carballo Herrera</option>
+                        <option value="a2">Hiram Rodriguez</option>
                     </select>
                     <form action="p_regAlumnos.php" method="post">
                         <input type="submit" class="submit" value="Agregar"> 
