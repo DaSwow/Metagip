@@ -8,7 +8,7 @@ $query = "SELECT * FROM public.cursos WHERE $stringClave='$clave';";
 $consulta = pg_query($conexion, $query);
 $curso = pg_fetch_row($consulta);
 $cantidadUnidades = $curso[4];
-$cantidadUnidades=$cantidadUnidades*3;
+$cantidadUnidades=($cantidadUnidades*2)+1;
 
 $query = "SELECT * FROM public.unidades WHERE $stringClaveCurso='$clave';";
 $consulta = pg_query($conexion, $query);
