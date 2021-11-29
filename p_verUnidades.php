@@ -30,7 +30,7 @@ $unidades = pg_fetch_array($consulta);
                     <td class="fila1"><p>Fecha Inicio</p></td>
                     <td class="fila"><p>Fecha Fin</p></td>
                 </tr>
-                <?php for ($i = 1; $i <= $cantidadUnidades; $i++) { ?>
+                <?php for ($i = 1; $i <= $cantidadUnidades; $i=$i+2) { ?>
                     <tr style="width: 300px; ">
                         <td><?php echo $i; ?></td>
                         <td><input id="date" name="fechaInicio<?php echo$i ?>" type="text" value="<?php echo $unidades[$i] ?>" style="width: 200px;" ></td>
