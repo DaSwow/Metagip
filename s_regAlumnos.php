@@ -5,7 +5,7 @@ $clave = $_POST['curso'];
 $idAlumno = $_POST['alumno'];
 
 //hola
-$query = "SELECT * FROM public.rel_cursos_alumnos WHERE claveCurso='$clave' AND idAlumno='$idAlumno';";
+$query = 'SELECT * FROM public.rel_cursos_alumnos WHERE "claveCurso"='.$clave.' AND "idAlumno"='.$idAlumno.';';
 $consulta = pg_query($conexion, $query);
 $cantidad = pg_num_rows($consulta);
 echo $cantidad;
