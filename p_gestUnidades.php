@@ -15,10 +15,10 @@ $cantidadUnidades = $curso[4];
 </head>
 <body>
     <div class="container">
-        <div class="unidad" >
+        <div class="unidad" style="width: 75%;">
             <h2>Unidades</h2>
             <form class="unidad-items" action="s_agregarUnidades.php"  method="POST">
-                <table class="colm1" border="1"   style="width: 75%;">
+                <table class="colm1" border="1"   >
                     <tr>
                         <td class="fila1"><p>Unidad</p></td>
                         <td class="fila1"><p>Fecha Inicio</p></td>
