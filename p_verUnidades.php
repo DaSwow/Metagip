@@ -8,7 +8,6 @@ $query = "SELECT * FROM public.cursos WHERE $stringClave='$clave';";
 $consulta = pg_query($conexion, $query);
 $curso = pg_fetch_row($consulta);
 $cantidadUnidades = $curso[4];
-$cantidadUnidades=($cantidadUnidades*2)+1;
 
 $query = "SELECT * FROM public.unidades WHERE $stringClaveCurso='$clave';";
 $consulta = pg_query($conexion, $query);
@@ -31,7 +30,7 @@ $unidades = pg_fetch_array($consulta);
                     <td class="fila1"><p>Fecha Inicio</p></td>
                     <td class="fila"><p>Fecha Fin</p></td>
                 </tr>
-                <?php for ($i = 1, $j=1; $i <= $cantidadUnidades; $i=$i+2,$j++) { ?>
+                <?php for ($i = 1, $j=1; $i <= ($cantidadUnidades * 2); $i=$i+2,$j++) { ?>
                     <tr style="width: 300px; ">
                         <td><?php echo $j; ?></td>
                         <td><input id="date" name="fechaInicio<?php echo$i ?>" type="text" value="<?php echo $unidades[$i] ?>" style="width: 200px;" ></td>
