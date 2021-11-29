@@ -1,5 +1,7 @@
 <?php
 
+session_start();
+
 require 'db.php';
 session_start();
 $mail = $_POST['logCorreo'];
@@ -13,10 +15,11 @@ $nombre = pg_fetch_row($consulta);
 echo $cantidad;
 
 if ($cantidad === 1) {
-    $_SESSION['nombre_usuario']=$nombre[2];
-    echo "<script type='text/javascript'>alert('Bienvenido $nombre[2]');location='frontEnd/menu.php';</script>";
+    $_SESSION["nombre_usuario"]=$nombre[2];
+    $_SESSION["correo_usuario"]=$nombre[0];
+    echo "<script type='text/javascript'>location='p_menu.php';</script>";
 } else {
-    echo "<script type='text/javascript'>alert('Datos incorrectos');location='../index.php';</script>";
+    echo "<script type='text/javascript'>alert('Datos incorrectos');location='index.php';</script>";
 }
 
 ?>

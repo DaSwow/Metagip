@@ -156,10 +156,14 @@ body{
 
 .menu h2{
     color: black;
-    margin-bottom: 45px;
     font-size:30px;
-    margin-left:20px;
+    text-align: center;
 
+}
+
+.menu h3{
+    margin-bottom: 20px;
+    text-align: center;
 }
 
 .menu input{
@@ -167,7 +171,7 @@ body{
     padding: 5px;
     font-size: 16px;
     margin-bottom: 10px;
-    margin-left:45px;
+    margin-left:10px;
     border-top-style: none;
     border-left-style: none;
     border-right-style: none;
@@ -176,9 +180,28 @@ body{
 
 }
 
-.menu .submit{
-    width: 150px;
+.menu .optb{
+    width: 55px;
+    display: inline-block;
+    border: 0;
+}
+
+.menu .optns{
+    width: 50px;
+    height: 29px;
     padding: 10px;
+    background: #A9E2F3;
+    color: black;
+    font-size: 12px;
+    alignment-adjust: central;
+    box-shadow: 0 0 3px 0 rgba(0, 0, 0, .2);
+    cursor: pointer;
+
+}
+
+.menu .submit{
+    width: 80px;
+    height: 25px;
     background: #A9E2F3;
     color: black;
     font-size: 12px;
@@ -186,35 +209,275 @@ body{
     cursor: pointer;
 
 }
+.menu p{
+    font-size: 20px;
+    margin-left:5px;
+    font-weight:bold;
+}
 .table-container{
     display: flex;
-    width: 950px;
-    height: 650px;
+    width: 1000px;
+    height: 700px;
     background: #fff;
     box-shadow: 0 1px 1px 0 rgba(0, 0, 0, .2);
 }
 table{
     border: 2px solid black;
+    margin: auto;
+
+
 }
 table.colm1{
     background-color:#fff;
     caption-side:bottom;
     border-collapse: separate;
     empty-cells:hide;
+    overflow:scroll;
+
 }
+/*** 
+del html registrar alumnos
+*/
+table.table2{
+background-color:#fff;
+caption-side:bottom;
+margin-top: 100px;
+border-collapse: separate;
+empty-cells:hide;
+height:150%;
+position: relative;
+superior: 150px;
+overflow:scroll;
+}
+
 td{
+    width:10%;
+    height:15px;
+    text-align:left;
+    vertical-align:top;
+    border-spacing:0;
+}
+
+td.optns{
+    border: 0;
+    width: 20px;
+    height: 15px;
 
 }
 
 td.fila{
-    font-size:14px;
     background-color:Azure;
-    width:200px;
-    height:20px;
+    width:30%;
+    height:25px;
+
+}
+td.fila1{
+    width:15%;
+    height:25px;
+    background-color:Azure;
 }
 
-td.fila2{
-    font-size:12px;
-    width:200px;
+td.fila2 p{
+    width:3%;
     height:10px;
+    font-size:18px;
+    font-weight:normal;
+}
+
+nav{
+    position:absolute;
+    left:820px;
+    cursor:pointer;
+}
+/*** 
+del html registrar alumnos
+*/
+#btn{
+height:-10px;
+   left:980px;
+}
+
+nav.editAlumno{
+    text-align: center; 
+}
+
+#scroll{
+    overflow:scroll;
+    height:520px;
+    width:740px;
+}
+
+#scroll table{
+    width:700px;
+
+}
+/*** 
+del html registrar alumnos
+*/
+#scroll2 table{
+width:850px;
+}
+/*** 
+del html registrar alumnos
+*/
+#scroll2{
+overflow:scroll;
+height:450px;
+width:930px;
+}
+
+.table-container2{
+    display: flex;
+    width: 1200px;
+    height: 700px;
+    background: #fff;
+    box-shadow: 0 1px 1px 0 rgba(0, 0, 0, .2);
+}
+/*** 
+del html registrar alumnos
+*/
+.table-container3{
+  display: flex;
+  width: 1200px;
+  height: 700px;
+  background: #fff;
+  box-shadow: 0 1px 1px 0 rgba(0, 0, 0, .2);
+}
+
+.unidad{
+    background-image: linear-gradient(to bottom right, #1ab6b6, #4cac6e);
+    padding: 5px;
+    margin-left:100px;
+}
+
+.unidad h2{
+    color: #fff;
+    margin-bottom: 45px;
+}
+
+.unidad input{
+    width: 40%;
+    padding: 5px;
+    font-size: 16px;
+    margin-bottom: 10px;
+    margin-left:10px;
+    border-top-style: none;
+    border-left-style: none;
+    border-right-style: none;
+    border-bottom: 1px solid #a8a8a8;
+    color: #333;
+}
+
+.unidad .inicio{
+    background: #fff;
+    border-style: none;
+    color: #fff;
+}
+.unidad .fin{
+    background: #fff;
+    border-style: none;
+    color: #fff;
+    margin-left:10px;
+}
+.unidad h2{
+    margin-left:30px;
+}
+/*** 
+del html registrar alumnos
+*/
+#cbox{
+height:30px;
+width:30px;
+}
+/*** 
+del html registrar alumnos
+*/
+.cursos{
+  width: 100%;
+  height: 10px;
+  padding: 10px;
+  display: flex;
+  justify-content: center;
+  margin: 0 auto;
+  align-items: center;
+  background-color:#c2b0f2;
+}
+/*** 
+del html registrar alumnos
+*/
+.buscador{
+  width: 100%;
+ height:10%;
+  padding: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color:#fff;
+}
+/*** 
+del html registrar alumnos
+*/
+.cursos input{
+ width: 15%;
+  padding: 5px;
+  float:left;
+  font-size: 16px;
+  margin-bottom: 25px;
+  border-top-style: none;
+  border-left-style: none;
+  border-right-style: none;
+  border-bottom: 1px solid #a8a8a8;
+  color: #333;
+}
+/*** 
+del html registrar alumnos
+*/
+.cursos select{
+  width: 30%;
+  padding: 5px;
+  font-size: 16px;
+  margin-bottom: 25px;
+  margin-left: 10px;
+  border-top-style: none;
+  border-left-style: none;
+  border-right-style: none;
+  border-bottom: 1px solid #a8a8a8;
+  color: #333;
+}
+/*** 
+del html registrar alumnos
+*/
+.buscador input{
+width: 30px;
+  padding: 5px;
+  font-size: 16px;
+  margin-bottom: 25px;
+  border-top-style: none;
+  border-left-style: none;
+  border-right-style: none;
+  border-bottom: 1px solid black;
+  color: #333;
+}
+/*** 
+del html registrar alumnos
+*/
+.buscador select{
+  width: 60%;
+  padding: 5px;
+  font-size: 16px;
+  margin-bottom: 25px;
+  margin-left: 10px;
+  border-top-style: none;
+  border-left-style: none;
+  border-right-style: none;
+  border-bottom: 1px solid #a8a8a8;
+  color: #333;
+}
+/*** 
+del html registrar alumnos
+*/
+main .cursos{
+    width:105%;
+    height:80px;
+    
 }
