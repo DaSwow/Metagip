@@ -36,7 +36,7 @@ $unidades = pg_fetch_all($consulta);
                     <td class="fila1"><p>Fecha Inicio</p></td>
                     <td class="fila"><p>Fecha Fin</p></td>
                 </tr>
-                <?php for ($i = 1, $j = 1; $i <= ($cantidadUnidades * 2); $i = $i + 2, $j++) { ?>
+                <?php for ($i = 0, $j = 1; $i < ($cantidadUnidades); $i = $i++, $j++) { ?>
 
 
 
