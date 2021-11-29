@@ -36,8 +36,8 @@ $unidades = pg_fetch_array($consulta);
                 <?php for ($i = 1; $i <= $cantidadUnidades; $i++) { ?>
                     <tr style="width: 300px; ">
                         <td><?php echo $i; ?></td>
-                        <td><input id="date" name="fechaInicio<?php echo$i?>" type="text" value="<?php echo unidades[$i-1] ?>" style="width: 200px;" ></td>
-                        <td><input id="date" name="fechaFin<?php echo$i?>"    type="text" value="<?php echo unidades[$i-1] ?>" style="width: 200px;" ></td>
+                        <td><input id="date" name="fechaInicio<?php echo$i?>" type="text" value="<?php echo $unidades[$i-1] ?>" style="width: 200px;" ></td>
+                        <td><input id="date" name="fechaFin<?php echo$i?>"    type="text" value="<?php echo $unidades[$i-1] ?>" style="width: 200px;" ></td>
                     </tr>
                 <?php } ?>
                 <br>
