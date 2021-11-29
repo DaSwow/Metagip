@@ -2,11 +2,11 @@
 
 include 'db.php';
 session_start();
-$clave = $_GET['clave'];
+$clave = $_POST['clave'];
 $query = "SELECT * FROM public.cursos WHERE clave='$clave';";
 $consulta = pg_query($conexion, $query);
 $curso = pg_fetch_row($consulta);
-$cantidadUnidades = $_GET('cantidadUnidades');
+$cantidadUnidades = $_POST('cantidadUnidades');
 
 $stringFechaIni = '"' . "fechaIni" . '"';
 $stringFechaFin = '"' . "fechaFin" . '"';
