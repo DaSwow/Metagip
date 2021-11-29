@@ -15,7 +15,7 @@ $cantidadUnidades = $curso[4];
 </head>
 <body>
     <div class="container">
-        <div class="unidad" >
+        <div class="unidad" style="width: 60%;">
             <h2>Unidades</h2>
             <form class="unidad-items" action="s_agregarUnidades.php"  method="POST">
                 <table class="colm1" border="1"   >
