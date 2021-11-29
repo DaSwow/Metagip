@@ -24,7 +24,7 @@ $consulta = pg_query($conexion, $query);
                     <input type="text" placeholder="ID" class="idC">
                     <select name="nombre">
                           <?php while ($row = pg_fetch_assoc($consulta)) { ?>
-                        <option value="<?php echo $row['nombre']?>"><?phpecho $row['nombre']?></option>
+                        <option value="<?php echo $row['nombre'];?>"><?phpecho $row['nombre'];?></option>
                        <!-- <option value="a1">Jesus Edith Carballo Herrera</option>
                         <option value="a2">Hiram Rodriguez</option>-->
                         <?php } ?>
