@@ -19,7 +19,7 @@ for ($i = 1; $i <= $cantidadUnidades; $i++) {
 
     if (!($fechaFin < $fechaIni)) {
 
-        $query = "SELECT * FROM public.unidades WHERE claveCurso='$clave' AND numeroUnidad=$i";
+        $query = "SELECT * FROM public.unidades WHERE (claveCurso='$clave') AND (numeroUnidad=$i)";
         $consulta = pg_query($conexion, $query);
         $cantidad = pg_num_rows($consulta);
         if ($cantidad === 0) {
