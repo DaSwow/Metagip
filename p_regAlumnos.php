@@ -19,12 +19,16 @@ $consulta = pg_query($conexion, $query);
                     <p><input type="text" placeholder="Curso" class="curso">
                         <select name="nombres">
                             <option value="materia">Metodologia Agiles</option>
+                        </select>
                 </div>
                 <div class="buscador">
                     <input type="text" placeholder="ID" class="idC">
                     <select name="nombre">
-                        <option value="a1">Jesus Edith Carballo Herrera</option>
-                        <option value="a2">Hiram Rodriguez</option>
+                        <?php  while ($row = pg_fetch_assoc($consulta)) { ?>
+                         <option value="<?php echo $row['nombre']; ?>"><?php echo $row['nombre']; ?></option>
+                        <?php } ?>
+                        <!--<option value="a1">Jesus Edith Carballo Herrera</option>
+                        <option value="a2">Hiram Rodriguez</option>-->
                     </select>
                     <form action="p_regAlumnos.php" method="post">
                         <input type="submit" class="submit" value="Agregar"> 
