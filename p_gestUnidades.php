@@ -13,11 +13,11 @@ $cantidadUnidades = $curso[4];
     <title>Gestionar Alumnos</title>
     <script src="jquery.min.js"></script>
 </head>
-<body style="margin-top: 5%;">
+<body>
     <div class="container">
-        <div class="unidad" >
+        <div class="unidad">
             <h2>Unidades</h2>
-            <div class="unidad-items">
+            <form class="unidad-items" action="s_agregarUnidades.php"  method="POST">
                 <table class="colm1" border="1">
                     <tr>
                         <td class="fila1"><p>Unidad</p></td>
@@ -27,17 +27,27 @@ $cantidadUnidades = $curso[4];
                     <?php for ($i = 0; $i < $cantidadUnidades; $i++) { ?>
                         <tr>
                             <td><?php echo $i + 1; ?></td>
-                            <td><?php echo "fechaIni"; ?></td>
-                            <td><?php echo "fechaFin"; ?></td>
+                            <td><input id="date" name="fecheInicio<?php echo ($i+1)?>" type="date" min="<?php echo $curso[6] ?>" max="<?php echo $curso[7] ?>" required></td>
+                            <td><input id="date" name="fechaFin<?php echo ($i+1)?>"    type="date" min="<?php echo $curso[6] ?>" max="<?php echo $curso[7] ?>" required></td>
                         </tr>
                     <?php } ?>
                 </table>
-            </div>
-        </div> 
-        <form action="p_gestCursos.php" method="post">
-            <input type="submit" class="submit" value="Regresar">
-        </form>
-    </div>
+                <br>
+                <input type="hidden" name="cantidadUnidades" value="<?php echo $cantidadUnidades?>">
+                <input type="hidden" name="idCurso" value="<?php echo $curso[0]?>">
+                <input type="submit" class="submit" value="Regresar">
+            </form>
+        </div>
+
+
+
+
+
+    </div> 
+    <form action="p_gestCursos.php" method="post">
+        <input type="submit" class="submit" value="Regresar">
+    </form>
+</div>
 
 </body>
 </html>
