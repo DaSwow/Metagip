@@ -27,8 +27,8 @@ $cantidadUnidades = $curso[4];
                     <?php for ($i = 1; $i <= $cantidadUnidades; $i++) { ?>
                         <tr>
                             <td><?php echo $i; ?></td>
-                            <td><input id="date" name="fecheInicio<?php echo ($i)?>" type="date" min="<?php echo $curso[6] ?>" max="<?php echo $curso[7] ?>" required></td>
-                            <td><input id="date" name="fechaFin<?php echo ($i)?>"    type="date" min="<?php echo $curso[6] ?>" max="<?php echo $curso[7] ?>" required></td>
+                            <td><input id="date" name="fecheInicio<?php echo$i?>" type="date" min="<?php echo $curso[6] ?>" max="<?php echo $curso[7] ?>" required></td>
+                            <td><input id="date" name="fechaFin<?php echo$i?>"    type="date" min="<?php echo $curso[6] ?>" max="<?php echo $curso[7] ?>" required></td>
                         </tr>
                     <?php } ?>
                 </table>

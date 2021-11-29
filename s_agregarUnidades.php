@@ -15,8 +15,8 @@ $stringClaveCurso = '"' . "claveCurso" . '"';
 for ($i = 1; $i <= $cantidadUnidades; $i++) {
 
 
-    $fechaIni = $_POST["fechaInicio$i"];
-    $fechaFin = $_POST["fechaFin$i"];
+    $fechaIni = $_POST["fechaInicio".$i];
+    $fechaFin = $_POST["fechaFin".$i];
 
     if (!($fechaFin < $fechaIni)) {
 
