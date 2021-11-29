@@ -26,8 +26,8 @@ for ($i = 1; $i <= $cantidadUnidades; $i++) {
         $cantidad = pg_num_rows($consulta);
         if ($cantidad === 0) {
             $queryInsert = "INSERT INTO public.unidades(
-	claveCurso, $stringFechaIni, $stringFechaFin , $i)
-	VALUES ('$clave', '$fechaIni','$fechaFin',$unidades);";
+	claveCurso, $stringFechaIni, $stringFechaFin , $stringNumeroUnidad)
+	VALUES ('$clave', '$fechaIni','$fechaFin',$i);";
             pg_query($queryInsert);
             echo "<script type='text/javascript'>alert('Unidades registradas exitosamente');location='p_gestCursos.php';</script>";
         } else {
