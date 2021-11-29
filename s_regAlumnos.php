@@ -6,9 +6,9 @@ $idAlumno = $_POST['alumno'];
 
 
 $query = "SELECT * FROM public.rel_cursos_alumnos WHERE claveCurso='$clave' AND idAlumno='$idAlumno';";
-$consulta = pg_query($conexion, $query);
-$cantidad = pg_num_rows($consulta);
-    echo $cantidad;
+//$consulta = pg_query($conexion, $query);
+//$cantidad = pg_num_rows($consulta);
+   echo $query;
     // if ($cantidad === 0) {
       //  $queryInsert = "INSERT INTO public.rel_cursos_alumnos(claveCurso, idAlumno) VALUES ('$clave', '$idAlumno);";
         //pg_query($queryInsert);
