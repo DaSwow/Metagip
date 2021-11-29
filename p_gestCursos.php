@@ -72,7 +72,7 @@ $consulta = pg_query($conexion, $query);
                                     </form>
                                 </td>
                                 <td >
-                                    <form action="p_verUnidades.php?" method="post">
+                                    <form action="p_verUnidades.php" method="post">
                                          <input type="hidden" name="clave" value="<?php echo $row['clave'] ?>" required>      
                                         <input type="submit" class="optns" value="Ver unidades" style="width: 80px;"/>
                                     </form>

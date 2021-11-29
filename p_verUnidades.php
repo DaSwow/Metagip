@@ -1,14 +1,15 @@
 <?php
 include 'db.php';
 session_start();
-$clave = $_GET['clave'];
+$clave = $_POST['clave'];
 $stringClave = '"' . "clave" . '"';
+$stringClaveCurso = '"' . "claveCurso" . '"';
 $query = "SELECT * FROM public.cursos WHERE $stringClave='$clave';";
 $consulta = pg_query($conexion, $query);
 $curso = pg_fetch_row($consulta);
 $cantidadUnidades = $curso[4];
 
-$query = "SELECT * FROM public.unidades WHERE claveCurso='$clave';";
+$query = "SELECT * FROM public.unidades WHERE $stringClaveCurso='$clave';";
 $consulta = pg_query($conexion, $query);
 $unidades = pg_fetch_array($consulta);
 
