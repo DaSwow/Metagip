@@ -58,7 +58,7 @@ $consulta = pg_query($conexion, $query);
                                 
                                 <td >
                                     <form action="s_editCurso.php?clave=<?php echo $row['clave'] ?>" method="post">
-                                        <input type="submit" class="optns" value="Editar" onclick="return confirm('¿Desea editar al curso?');" style="width: 60px;"/>
+                                        <input type="submit" class="optns" value="Editar" onclick="return confirm('¿Desea editar al curso? Editar curso eliminará las unidades creadas.');" style="width: 60px;"/>
                                     </form>
                                 </td>
                                 <td>
