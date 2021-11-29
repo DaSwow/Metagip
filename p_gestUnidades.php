@@ -13,7 +13,7 @@ $cantidadUnidades = $curso[4];
     <title>Gestionar Alumnos</title>
     <script src="jquery.min.js"></script>
 </head>
-<body>
+<body style="margin-top: 5%;">
     <div class="container">
         <div class="unidad" >
             <h2>Unidades</h2>
