@@ -11,6 +11,7 @@ $cantidadUnidades = $_POST['cantidadUnidades'];
 $stringFechaIni = '"' . "fechaIni" . '"';
 $stringFechaFin = '"' . "fechaFin" . '"';
 $stringClaveCurso = '"' . "claveCurso" . '"';
+$stringNumeroUnidad = '"' . "numeroUnidad" . '"';
 
 for ($i = 1; $i <= $cantidadUnidades; $i++) {
 
@@ -20,7 +21,7 @@ for ($i = 1; $i <= $cantidadUnidades; $i++) {
 
     if (!($fechaFin < $fechaIni)) {
 
-        $query = "SELECT * FROM public.unidades WHERE ($stringClaveCurso='$clave') AND (numeroUnidad=$i)";
+        $query = "SELECT * FROM public.unidades WHERE ($stringClaveCurso='$clave') AND ($stringNumeroUnidad=$i)";
         $consulta = pg_query($conexion, $query);
         $cantidad = pg_num_rows($consulta);
         if ($cantidad === 0) {
