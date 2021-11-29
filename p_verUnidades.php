@@ -11,7 +11,7 @@ $cantidadUnidades = $curso[4];
 
 $query = "SELECT * FROM public.unidades WHERE $stringClaveCurso='$clave';";
 $consulta = pg_query($conexion, $query);
-$unidades = pg_fetch_array($consulta);
+$unidades = pg_fetch_all($consulta);
 ?>
 <!DOCTYPE html>
 <head>
@@ -34,7 +34,7 @@ $unidades = pg_fetch_array($consulta);
                     <tr style="width: 300px; ">
                         <td><?php echo $j; ?></td>
                         <td><input id="date" name="fechaInicio<?php echo$i ?>" type="text" value="<?php echo $unidades[$i] ?>" style="width: 200px;" ></td>
-                        <td><input id="date" name="fechaFin<?php echo$i ?>"    type="text" value="<?php echo $unidades[$i+1] ?>" style="width: 200px;" ></td>
+                        <td><input id="date" name="fechaFin<?php echo$i ?>"    type="text" value="<?php echo $unidades[$i] ?>" style="width: 200px;" ></td>
                     </tr>
                 <?php } ?>
 
