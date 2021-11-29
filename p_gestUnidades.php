@@ -24,11 +24,11 @@ $cantidadUnidades = $curso[4];
                         <td class="fila1"><p>Fecha Inicio</p></td>
                         <td class="fila"><p>Fecha Fin</p></td>
                     </tr>
-                    <?php for ($i = 0; $i < $cantidadUnidades; $i++) { ?>
+                    <?php for ($i = 1; $i <= $cantidadUnidades; $i++) { ?>
                         <tr>
                             <td><?php echo $i + 1; ?></td>
-                            <td style="width: 20%;"><input id="date" name="fecheInicio<?php echo ($i+1)?>" type="date" min="<?php echo $curso[6] ?>" max="<?php echo $curso[7] ?>" required></td>
-                            <td style="width: 20%;"><input id="date" name="fechaFin<?php echo ($i+1)?>"    type="date" min="<?php echo $curso[6] ?>" max="<?php echo $curso[7] ?>" required></td>
+                            <td><input id="date" name="fecheInicio<?php echo ($i+1)?>" type="date" min="<?php echo $curso[6] ?>" max="<?php echo $curso[7] ?>"  style="width: 20%;" required></td>
+                            <td><input id="date" name="fechaFin   <?php echo ($i+1)?>" type="date" min="<?php echo $curso[6] ?>" max="<?php echo $curso[7] ?>"  style="width: 20%;" required></td>
                         </tr>
                     <?php } ?>
                 </table>
