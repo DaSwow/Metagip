@@ -3,12 +3,13 @@ require 'db.php';
 session_start();
 $clave = $_POST['curso'];
 $idAlumno = $_POST['alumno'];
-
+$stringClaveCurso = '"' . "claveCurso" . '"';
+$stringIdAlumno = '"' . "idAlumno" . '"';
 //
-$query = "SELECT * FROM public.rel_cursos_alumnos WHERE claveCurso='$clave' AND idAlumno='$idAlumno';";
+$query = "SELECT * FROM public.rel_cursos_alumnos WHERE ($stringClaveCurso='$clave') AND ($stringIdAlumno='$idAlumno');";
 $consulta = pg_query($conexion, $query);
-//$cantidad = pg_num_rows($consulta);
-    echo $query;
+$cantidad = pg_num_rows($consulta);
+    echo $cantidad;
   //   if ($cantidad === 0) {
     //    $queryInsert = "INSERT INTO public.rel_cursos_alumnos(claveCurso, idAlumno) VALUES ('$clave', '$idAlumno);";
       //  pg_query($queryInsert);
