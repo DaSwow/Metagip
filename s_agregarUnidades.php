@@ -13,11 +13,13 @@ $stringFechaIni = '"' . "fechaIni" . '"';
 $stringFechaFin = '"' . "fechaFin" . '"';
 $stringNumeroUnidad = '"' . "numeroUnidad" . '"';
 
+
+
 for ($i = 1; $i <= $cantidadUnidades; $i++) {
 
 
-    $fechaIni = $_POST["fechaInicio".$i];
-    $fechaFin = $_POST["fechaFin".$i];
+    $fechaIni = $_POST["fechaInicio" . $i];
+    $fechaFin = $_POST["fechaFin" . $i];
 
     if (!($fechaFin < $fechaIni)) {
 
@@ -31,7 +33,10 @@ for ($i = 1; $i <= $cantidadUnidades; $i++) {
             pg_query($queryInsert);
             echo "<script type='text/javascript'>alert('Unidades registradas exitosamente');location='p_gestCursos.php';</script>";
         } else {
-            echo "<script type='text/javascript'>alert('Ocurrio un problema inesperado.');location='p_gestUnidades.php';</script>";
+            $queryInsert = "UPDATE public.unidades SET
+	$stringClaveCurso='$clave', $stringFechaIni='$fechaIni', $stringFechaFin='$fechaFin' , $stringNumeroUnidad=$i WHERE ($stringClaveCurso='$clave') AND ($stringNumeroUnidad=$i)";
+            pg_query($queryInsert);
+            echo "<script type='text/javascript'>alert('Ocurrio un problema inesperado.');location='p_gestCursos.php';</script>";
         }
     } else {
         echo "<script type='text/javascript'>alert('La fecha de fin del curso no puede ser antes que la fecha de inicio.');location='p_gestUnidades.php';</script>";
