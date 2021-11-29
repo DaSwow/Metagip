@@ -9,7 +9,6 @@ $consulta = pg_query($conexion, $query);
 <!DOCTYPE html>
 <link rel="stylesheet" href="style.css">
 <title>Gestionar Alumnos</title>
-</head>
 <body>
     <div class="container">
         <div class="table-container">
