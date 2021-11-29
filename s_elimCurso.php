@@ -5,13 +5,17 @@ session_start();
 require 'db.php';
 
 $clave = $_GET['clave'];
-$query = "DELETE FROM public.cursos WHERE clave = '$clave'";
-$consulta = pg_query($conexion, $query);
 
 
 $stringClave = '"' . "claveCurso" . '"';
 $query = "DELETE FROM public.unidades WHERE $stringClave = '$clave'";
 $consulta = pg_query($conexion, $query);
+
+
+$query = "DELETE FROM public.cursos WHERE clave = '$clave'";
+$consulta = pg_query($conexion, $query);
+
+
 
 
 if (!$consulta) {
