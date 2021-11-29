@@ -18,7 +18,7 @@ $cantidadUnidades = $curso[4];
         <div class="unidad" >
             <h2>Unidades</h2>
             <form class="unidad-items" action="s_agregarUnidades.php"  method="POST">
-                <table class="colm1" border="1">
+                <table class="colm1" border="1"   style="width: 75%;">
                     <tr>
                         <td class="fila1"><p>Unidad</p></td>
                         <td class="fila1"><p>Fecha Inicio</p></td>
@@ -27,8 +27,8 @@ $cantidadUnidades = $curso[4];
                     <?php for ($i = 1; $i <= $cantidadUnidades; $i++) { ?>
                         <tr>
                             <td><?php echo $i + 1; ?></td>
-                            <td><input id="date" name="fecheInicio<?php echo ($i+1)?>" type="date" min="<?php echo $curso[6] ?>" max="<?php echo $curso[7] ?>"  style="width: 20%;" required></td>
-                            <td><input id="date" name="fechaFin   <?php echo ($i+1)?>" type="date" min="<?php echo $curso[6] ?>" max="<?php echo $curso[7] ?>"  style="width: 20%;" required></td>
+                            <td><input id="date" name="fecheInicio<?php echo ($i)?>" type="date" min="<?php echo $curso[6] ?>" max="<?php echo $curso[7] ?>" required></td>
+                            <td><input id="date" name="fechaFin   <?php echo ($i)?>" type="date" min="<?php echo $curso[6] ?>" max="<?php echo $curso[7] ?>" required></td>
                         </tr>
                     <?php } ?>
                 </table>
