@@ -11,6 +11,12 @@ $cantidadUnidades = $curso[4];
 
 $query = "SELECT * FROM public.unidades WHERE $stringClaveCurso='$clave';";
 $consulta = pg_query($conexion, $query);
+
+for ($i = 0; $i < $cantidadUnidades; $i++) {
+    
+}
+
+
 $unidades = pg_fetch_all($consulta);
 ?>
 <!DOCTYPE html>
@@ -30,11 +36,14 @@ $unidades = pg_fetch_all($consulta);
                     <td class="fila1"><p>Fecha Inicio</p></td>
                     <td class="fila"><p>Fecha Fin</p></td>
                 </tr>
-                <?php for ($i = 1, $j=1; $i <= ($cantidadUnidades * 2); $i=$i+2,$j++) { ?>
+                <?php for ($i = 1, $j = 1; $i <= ($cantidadUnidades * 2); $i = $i + 2, $j++) { ?>
+
+
+
                     <tr style="width: 300px; ">
                         <td><?php echo $j; ?></td>
-                        <td><input id="date" name="fechaInicio<?php echo$i ?>" type="text" value="<?php echo $unidades[$i][1] ?>" style="width: 200px;" ></td>
-                        <td><input id="date" name="fechaFin<?php echo$i ?>"    type="text" value="<?php echo $unidades[$i][2] ?>" style="width: 200px;" ></td>
+                        <td><input id="date" name="fechaInicio<?php echo$i ?>" type="text" value="<?php echo $unidades[$i]['fechaIni'] ?>" style="width: 200px;" ></td>
+                        <td><input id="date" name="fechaFin<?php echo$i ?>"    type="text" value="<?php echo $unidades[$i]['fechaFin'] ?>" style="width: 200px;" ></td>
                     </tr>
                 <?php } ?>
 
