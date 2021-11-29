@@ -16,28 +16,29 @@ $consulta = pg_query($conexion, $query);
         <div class="table-container3">
             <div class="menu">
                 <h2>Registrar Alumnos</h2>
-                <div class="cursos">
-                    <p>Curso:</p>
-                    <p><input type="text" placeholder="Curso" class="curso">
-                        <select name="nombres">
+                <form action="s_regAlumnos.php" method="post">
+                    <div class="cursos">
+                        <p>Curso:</p>
+                        <p><input type="text" placeholder="Curso" class="curso">
+                        <select name="curso">
                              <?php  while ($rowCurso = pg_fetch_assoc($consultaCurso)) { ?>
-                            <option value="<?php echo $rowCurso['nombre']; ?>"><?php echo $rowCurso['nombre']; ?></option>
+                            <option value="<?php echo $rowCurso['clave']; ?>"><?php echo $rowCurso['nombre']; ?></option>
                               <?php } ?>
                         </select>
-                </div>
-                <div class="buscador">
-                    <input type="text" placeholder="ID" class="idC">
-                    <select name="nombre">
-                        <?php  while ($row = pg_fetch_assoc($consulta)) { ?>
-                         <option value="<?php echo $row['nombre']; ?>"><?php echo $row['nombre']; ?></option>
-                        <?php } ?>
+                    </div>
+                    <div class="buscador">
+                        <input type="text" placeholder="ID" class="idC">
+                        <select name="alumno">
+                            <?php  while ($row = pg_fetch_assoc($consulta)) { ?>
+                            <option value="<?php echo $row['id']; ?>"><?php echo $row['nombre']; ?></option>
+                            <?php } ?>
                         <!--<option value="a1">Jesus Edith Carballo Herrera</option>
                         <option value="a2">Hiram Rodriguez</option>-->
-                    </select>
-                    <form action="p_regAlumnos.php" method="post">
+                        </select>
+                    
+                    </div>
                         <input type="submit" class="submit" value="Agregar"> 
-                    </form>
-                </div>
+                </form>
                 <div id="scroll2">
                     <table class="table2"border="1">
                         <tr>
