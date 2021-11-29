@@ -58,17 +58,17 @@ $consulta = pg_query($conexion, $query);
                                 
                                 <td >
                                     <form action="s_editCurso.php?clave=<?php echo $row['clave'] ?>" method="post">
-                                        <input type="submit" class="optns" value="Editar" onclick="return confirm('¿Desea editar al curso?');" style="width: 100px;"/>
+                                        <input type="submit" class="optns" value="Editar" onclick="return confirm('¿Desea editar al curso?');" style="width: 60px;"/>
                                     </form>
                                 </td>
                                 <td>
                                     <form action="s_elimCurso.php?clave=<?php echo $row['clave'] ?>" method="post">
-                                        <input type="submit" class="optns" value="Borrar" onclick="return confirm('¿Seguro que desea eliminar el curso?');" style="width: 100px;"/>
+                                        <input type="submit" class="optns" value="Borrar" onclick="return confirm('¿Seguro que desea eliminar el curso?');" style="width: 60px;"/>
                                     </form>
                                 </td>
                                 <td >
                                     <form action="p_gestUnidades.php?clave=<?php echo $row['clave'] ?>" method="post">
-                                        <input type="submit" class="optns" value="Unidades" style="width: 100px;"/>
+                                        <input type="submit" class="optns" value="Unidades" style="width: 80px;"/>
                                     </form>
                                 </td>
                             </tr>
