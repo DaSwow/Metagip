@@ -33,24 +33,14 @@ $unidades = pg_fetch_all($consulta);
                     <td class="fila1"><p>Fecha Inicio</p></td>
                     <td class="fila"><p>Fecha Fin</p></td>
                 </tr>
-                <?php if (empty($unidades)) { ?>
-                    <?php for ($i = 0; $i < $cantidadUnidades; $i++) { ?>
-                        <tr style="width: 300px; ">
-                            <td><?php echo $i + 1; ?></td>
-                            <td><input id="date" name="fechaInicio<?php echo($i + 1) ?>" type="text" value="Vacío" style="width: 200px;" ></td>
-                            <td><input id="date" name="fechaFin<?php echo($i + 1) ?>"    type="text" value="Vacío" style="width: 200px;" ></td>
-                        </tr>
-                    <?php } ?>
-
-
-                <?php } else{ ?>
+            
                 <?php for ($i = 0; $i < $cantidadUnidades; $i++) { ?>
                     <tr style="width: 300px; ">
                         <td><?php echo $i + 1; ?></td>
                         <td><input id="date" name="fechaInicio<?php echo($i + 1) ?>" type="text" value="<?php echo $unidades[$i]['fechaIni'] ?>" style="width: 200px;" ></td>
                         <td><input id="date" name="fechaFin<?php echo($i + 1) ?>"    type="text" value="<?php echo $unidades[$i]['fechaFin'] ?>" style="width: 200px;" ></td>
                     </tr>
-                <?php } }?>
+                <?php } ?>
 
             </table>
             <br><br>
