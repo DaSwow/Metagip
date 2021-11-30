@@ -33,7 +33,7 @@ $unidades = pg_fetch_all($consulta);
                     <td class="fila1"><p>Fecha Inicio</p></td>
                     <td class="fila"><p>Fecha Fin</p></td>
                 </tr>
-                <?php if ($unidades === null) { ?>
+                <?php if (empty($unidades)) { ?>
                     <?php for ($i = 0; $i < $cantidadUnidades; $i++) { ?>
                         <tr style="width: 300px; ">
                             <td><?php echo $i + 1; ?></td>

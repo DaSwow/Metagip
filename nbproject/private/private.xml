@@ -5,7 +5,11 @@
         <group>
             <file>file:/C:/Users/carls/source/repos/Metagip/p_gestCursos.php</file>
             <file>file:/C:/Users/carls/source/repos/Metagip/index.php</file>
+            <file>file:/C:/Users/carls/source/repos/Metagip/s_editCurso.php</file>
+            <file>file:/C:/Users/carls/source/repos/Metagip/s_EliminarUnidades.php</file>
             <file>file:/C:/Users/carls/source/repos/Metagip/p_menu.php</file>
+            <file>file:/C:/Users/carls/source/repos/Metagip/p_gestUnidades.php</file>
+            <file>file:/C:/Users/carls/source/repos/Metagip/s_elimCurso.php</file>
         </group>
     </open-files>
 </project-private>
