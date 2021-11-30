@@ -39,6 +39,9 @@ $consulta = pg_query($conexion, $query);
                     </div>
                         <input type="submit" class="submit" value="Agregar"> 
                 </form>
+                 <form action="p_regAlumnos.php?<?php$row['id']?>" method="post">
+                            <input type="submit" class="submit" value="Desplegar Lista">
+                </form>
                 <div id="scroll2">
                     <table class="table2"border="1">
                         <tr>
@@ -56,9 +59,6 @@ $consulta = pg_query($conexion, $query);
                     <nav id="btn">
                         <form action="p_regAlumnos.php" method="post">
                             <input type="submit" class="submit" value="Eliminar">
-                        </form>
-                        <form action="p_regAlumnos.php" method="post">
-                            <input type="submit" class="submit" value="Guardar">
                         </form>
                         <form action="p_menu.php" method="post">
                             <input type="submit" class="submit" value="Regresar">
