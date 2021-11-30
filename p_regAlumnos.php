@@ -39,7 +39,7 @@ $consulta = pg_query($conexion, $query);
                     </div>
                         <input type="submit" class="submit" value="Agregar"> 
                 </form>
-                 <form action="p_regAlumnos.php?<?phpecho $row['id'];?>" method="post">
+                 <form action="p_regAlumnos.php?cursoSeleccionado=<?php echo $rowCurso['clave'] ?>" method="post">
                             <input type="submit" class="submit" value="Desplegar Lista">
                 </form>
                 <div id="scroll2">
