@@ -53,8 +53,8 @@ $cantidadAlumnosEnCurso = pg_num_rows($consultaAlumnosEnCurso);
                         <input type="submit" class="submit"  name="botonAccion"   value="desplegar">
                     </form>
                     <div id="scroll2">
-                        <table class="table2"border="1">
-                            <?php for ($row = 0; $i < count($consultaAlumnosEnCurso); $i++) { ?>
+                        <table class="table2 "border="1">
+                            <?php for ($row = 0; $i < $cantidadAlumnosEnCurso; $i++) { ?>
                                 <tr>
                                     <td class="fila1"><p>ID</p></td>
                                     <td class="fila"><p>Alumno</p></td>
