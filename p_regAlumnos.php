@@ -18,8 +18,9 @@ $stringNombre = '"' . "nombre" . '"';
 $clave = $_GET['curso'];
 $queryAlumnos = "SELECT $stringId,$stringNombre FROM public.alumnos INNER JOIN (SELECT * FROM public.rel_cursos_alumnos where $stringClaveCurso='$clave') AS curso ON (alumnos.id = $stringIdAlumno);";
 $consultaAlumnosEnCurso = pg_query($conexion, $queryAlumnos);
+
 $alumnosEnCurso = pg_fetch_all($consultaAlumnosEnCurso);
-$cantidadAlumnosEnCurso = pg_num_rows($alumnosEnCurso);
+$cantidadAlumnosEnCurso = count($alumnosEnCurso);
 ?>
 <!DOCTYPE html>
 <html>
