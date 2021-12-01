@@ -11,8 +11,8 @@ $consulta = pg_query($conexion, $query);
 
 
 if (!$consulta) {
-    echo "<script type='text/javascript'>alert('Datos incorrectos');location='p_regAlumnos.php?clave=$clave';</script>";
+    echo "<script type='text/javascript'>alert('Datos incorrectos');location='p_regAlumnos.php?curso=$clave';</script>";
 } else {
-    echo "<script type='text/javascript'>alert('Alumno eliminado del curso');location='p_regAlumnos.php?clave=$clave';</script>";
+    echo "<script type='text/javascript'>alert('Alumno eliminado del curso');location='p_regAlumnos.php?curso=$clave';</script>";
 }
 ?>
