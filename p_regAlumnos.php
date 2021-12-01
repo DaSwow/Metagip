@@ -40,8 +40,8 @@ $alumnosEnCurso = $_GET['alumnos'];
                             </select>
                             <br><br>
                         </div>
-                        <input type="submit" class="submit"  name="botonAccion"   value="Agregar"> 
-                        <input type="submit" class="submit"  name="botonAccion"   value="Desplegar Lista">
+                        <input type="submit" class="submit"  name="botonAccion"   value="agregar"> 
+                        <input type="submit" class="submit"  name="botonAccion"   value="desplegar">
                     </form>
                     <div id="scroll2">
                         <table class="table2"border="1">

@@ -23,11 +23,10 @@ if ($accion==="agregar") {
         echo "<script type='text/javascript'>alert('Este alumn@ ya esta registrado');location='../p_regAlumnos.php';</script>";
     }
 } else if ($accion==="desplegar") {
-    $queryAlumnosDelCurso = "SELECT * FROM public.rel_cursos_alumnos WHERE ($stringClaveCurso='$clave');";
     $stringId= '"' . "id" . '"';
-    $$stringId= '"' . "nombre" . '"';
-    $queryNombreAlumno = "SELECT $stringId,$stringId FROM public.alumnos INNER JOIN (SELECT * FROM public.rel_cursos_alumnos where $stringClaveCurso='ABC512') AS curso ON (alumnos.id = $stringIdAlumno);";
-    $consulta = pg_query($conexion, $queryAlumnosDelCurso);
-    echo "<script type='text/javascript'>location='../p_regAlumnos.php;</script>";
+    $stringId= '"' . "nombre" . '"';
+    $queryAlumnos = "SELECT $stringId,$stringId FROM public.alumnos INNER JOIN (SELECT * FROM public.rel_cursos_alumnos where $stringClaveCurso='ABC512') AS curso ON (alumnos.id = $stringIdAlumno);";
+    $consultaAlumnos = pg_query($conexion, $queryAlumnos);
+    echo "<script type='text/javascript'>location='../p_regAlumnos.php?alumnos=$consultaAlumnos;</script>";
 }
 ?>
