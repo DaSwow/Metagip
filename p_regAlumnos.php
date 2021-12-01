@@ -45,14 +45,14 @@ $alumnosEnCurso = $_GET['alumnos'];
                     </form>
                     <div id="scroll2">
                         <table class="table2"border="1">
-                            <?php while ($row = pg_fetch_assoc($alumnosEnCurso)) { ?>
+                            <?php for ($row=0;$i < count($alumnosEnCurso); $i++) { ?>
                                 <tr>
                                     <td class="fila1"><p>ID</p></td>
                                     <td class="fila"><p>Alumno</p></td>
                                 </tr>
                                 <tr>
-                                    <td class="fila2"><p><?php echo $row['id']; ?></p></td>
-                                    <td class="fila2"><p><?php echo $row['nombre']; ?></p></td>
+                                    <td class="fila2"><p><?php echo $alumnosEnCurso[$row]['id']; ?></p></td>
+                                    <td class="fila2"><p><?php echo $alumnosEnCurso[$row]['nombre']; ?></p></td>
                                 </tr>
                             <?php } ?>
                         </table>
