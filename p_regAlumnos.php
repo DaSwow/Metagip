@@ -55,19 +55,25 @@ if (isset($_GET['curso'])) {
                         <input type="submit" class="submit"  name="botonAccion"   value="agregar"> 
                         <input type="submit" class="submit"  name="botonAccion"   value="desplegar">
                     </form>
+
                     <div id="scroll2">
                         <table class="table2 "border="1">
                             <tr>
                                 <td class="fila1"><p>ID</p></td>
                                 <td class="fila"><p>Alumno</p></td>
                             </tr>
-                            <?php if(!empty($alumnosEnCurso)){?>
-                            <?php for ($row = 0; $row < $cantidadAlumnosEnCurso; $row++) { ?>
-                                <tr>
-                                    <td class="fila2"><p><?php echo $alumnosEnCurso[$row]['id']; ?></p></td>
-                                    <td class="fila2"><p><?php echo $alumnosEnCurso[$row]['nombre']; ?></p></td>
-                                </tr>
-                            <?php }} ?>
+                            <?php if (!empty($alumnosEnCurso)) { ?>
+                                <?php for ($row = 0; $row < $cantidadAlumnosEnCurso; $row++) { ?>
+                                    <tr>
+                                        <td class="fila2"><p><?php echo $alumnosEnCurso[$row]['id']; ?></p></td>
+                                        <td class="fila2"><p><?php echo $alumnosEnCurso[$row]['nombre']; ?></p></td>
+                                        <td class="fila2"><form action="s_ElimAlumnosCurso.php?alumno=<?php echo $alumnosEnCurso[$row]['id'] ?>
+                                                                &curso=<?php echo $clave ?>" method="post">
+                                                <input type="submit" class="optns" value="Borrar" onclick="return confirm('¿Seguro que desea eliminar el curso?');" style="width: 60px;"/>
+                                            </form></td>
+                                    </tr>
+                                <?php }
+                            } ?>
                         </table>
                         <nav id="btn">
                             <form action="p_regAlumnos.php" method="post">
