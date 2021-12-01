@@ -17,7 +17,8 @@ $stringNombre = '"' . "nombre" . '"';
 
 $clave = $_GET['curso'];
 $queryAlumnos = "SELECT $stringId,$stringNombre FROM public.alumnos INNER JOIN (SELECT * FROM public.rel_cursos_alumnos where $stringClaveCurso='$clave') AS curso ON (alumnos.id = $stringIdAlumno);";
-$consultaAlumnos = pg_query($conexion, $queryAlumnos);
+$consultaAlumnosEnCurso = pg_query($conexion, $queryAlumnos);
+$cantidadAlumnosEnCurso = pg_num_rows($consultaAlumnosEnCurso);
 ?>
 <!DOCTYPE html>
 <html>
@@ -53,14 +54,14 @@ $consultaAlumnos = pg_query($conexion, $queryAlumnos);
                     </form>
                     <div id="scroll2">
                         <table class="table2"border="1">
-                            <?php for ($row = 0; $i < count($consultaAlumnos); $i++) { ?>
+                            <?php for ($row = 0; $i < count($consultaAlumnosEnCurso); $i++) { ?>
                                 <tr>
                                     <td class="fila1"><p>ID</p></td>
                                     <td class="fila"><p>Alumno</p></td>
                                 </tr>
                                 <tr>
-                                    <td class="fila2"><p><?php echo $alumnosEnCurso[$row]['id']; ?></p></td>
-                                    <td class="fila2"><p><?php echo $alumnosEnCurso[$row]['nombre']; ?></p></td>
+                                    <td class="fila2"><p><?php echo $consultaAlumnosEnCurso[$row]['id']; ?></p></td>
+                                    <td class="fila2"><p><?php echo $consultaAlumnosEnCurso[$row]['nombre']; ?></p></td>
                                 </tr>
                             <?php } ?>
                         </table>
