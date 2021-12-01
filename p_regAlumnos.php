@@ -68,8 +68,9 @@ if (isset($_GET['curso'])) {
                                         <td class="fila2"><p><?php echo $alumnosEnCurso[$row]['id']; ?></p></td>
                                         <td class="fila2"><p><?php echo $alumnosEnCurso[$row]['nombre']; ?></p></td>
                                         <td class="fila2">
-                                            <form action="s_ElimAlumnosCurso.php?alumno=<?php echo $alumnosEnCurso[$row]['id'] ?>&curso=<?php echo $clave ?>" method="post">
-                                                <input type="hidden" name="clave" value="<?php echo $clave; ?>">
+                                            <form action="s_ElimAlumnosCurso.php" method="post">
+                                                <input type="hidden" name="clave" value="<?php echo $alumnosEnCurso[$row]['id']; ?>">
+                                                <input type="hidden" name="alumno" value="<?php echo $clave; ?>">
                                                 <input type="submit" class="optns" value="Borrar" onclick="return confirm('¿Seguro que desea eliminar el alumno del curso?');" style="width: 60px;"/>
                                             </form></td>
                                     </tr>
