@@ -27,6 +27,6 @@ if ($accion === "agregar") {
 } else if ($accion === "desplegar") {
     $queryAlumnos = "SELECT $stringId,$stringNombre FROM public.alumnos INNER JOIN (SELECT * FROM public.rel_cursos_alumnos where $stringClaveCurso='$clave') AS curso ON (alumnos.id = $stringIdAlumno);";
     $consultaAlumnos = pg_query($conexion, $queryAlumnos);
-    echo "<script type='text/javascript'>location='../p_regAlumnos.php?alumnos=$consultaAlumnos;</script>";
+    echo "<script type='text/javascript'>location='../p_regAlumnos.php?alumnos=$consultaAlumnos';</script>";
 }
 ?>
