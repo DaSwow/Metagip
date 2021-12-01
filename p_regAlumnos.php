@@ -58,7 +58,7 @@ $cantidadAlumnosEnCurso = pg_num_rows($consultaAlumnosEnCurso);
                                 <td class="fila1"><p>ID</p></td>
                                 <td class="fila"><p>Alumno</p></td>
                             </tr>
-                            <?php for ($row = 0; $i < $cantidadAlumnosEnCurso; $i++) { ?>
+                            <?php for ($row = 0; $row < $cantidadAlumnosEnCurso; $row++) { ?>
                                 <tr>
                                     <td class="fila2"><p><?php echo $consultaAlumnosEnCurso[$row]['id']; ?></p></td>
                                     <td class="fila2"><p><?php echo $consultaAlumnosEnCurso[$row]['nombre']; ?></p></td>
