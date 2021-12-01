@@ -16,11 +16,12 @@ $stringId = '"' . "id" . '"';
 $stringNombre = '"' . "nombre" . '"';
 
 $clave = $_GET['curso'];
-$queryAlumnos = "SELECT $stringId,$stringNombre FROM public.alumnos INNER JOIN (SELECT * FROM public.rel_cursos_alumnos where $stringClaveCurso='$clave') AS curso ON (alumnos.id = $stringIdAlumno);";
-$consultaAlumnosEnCurso = pg_query($conexion, $queryAlumnos);
-
-$alumnosEnCurso = pg_fetch_all($consultaAlumnosEnCurso);
-$cantidadAlumnosEnCurso = count($alumnosEnCurso);
+if ($clave != null) {
+    $queryAlumnos = "SELECT $stringId,$stringNombre FROM public.alumnos INNER JOIN (SELECT * FROM public.rel_cursos_alumnos where $stringClaveCurso='$clave') AS curso ON (alumnos.id = $stringIdAlumno);";
+    $consultaAlumnosEnCurso = pg_query($conexion, $queryAlumnos);
+    $alumnosEnCurso = pg_fetch_all($consultaAlumnosEnCurso);
+    $cantidadAlumnosEnCurso = count($alumnosEnCurso);
+}
 ?>
 <!DOCTYPE html>
 <html>
@@ -38,7 +39,7 @@ $cantidadAlumnosEnCurso = count($alumnosEnCurso);
                                 <select name="curso" required>
                                     <?php while ($rowCurso = pg_fetch_assoc($consultaCurso)) { ?>
                                         <option value="<?php echo $rowCurso['clave']; ?>"><?php echo $rowCurso['nombre']; ?></option>
-                                    <?php } ?>
+<?php } ?>
                                 </select>
                                 <br><br>
                         </div>
@@ -47,7 +48,7 @@ $cantidadAlumnosEnCurso = count($alumnosEnCurso);
                             <select name="alumno">
                                 <?php while ($row = pg_fetch_assoc($consultaAlumno)) { ?>
                                     <option value="<?php echo $row['id']; ?>"><?php echo $row['nombre']; ?></option>
-                                <?php } ?>
+<?php } ?>
                             </select>
                             <br><br>
                         </div>
@@ -60,12 +61,12 @@ $cantidadAlumnosEnCurso = count($alumnosEnCurso);
                                 <td class="fila1"><p>ID</p></td>
                                 <td class="fila"><p>Alumno</p></td>
                             </tr>
-                            <?php for ($row = 0; $row < $cantidadAlumnosEnCurso; $row++) { ?>
+<?php for ($row = 0; $row < $cantidadAlumnosEnCurso; $row++) { ?>
                                 <tr>
                                     <td class="fila2"><p><?php echo $alumnosEnCurso[$row]['id']; ?></p></td>
                                     <td class="fila2"><p><?php echo $alumnosEnCurso[$row]['nombre']; ?></p></td>
                                 </tr>
-                            <?php } ?>
+<?php } ?>
                         </table>
                         <nav id="btn">
                             <form action="p_regAlumnos.php" method="post">
