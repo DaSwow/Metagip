@@ -25,7 +25,7 @@ if ($accion==="agregar") {
 } else if ($accion==="desplegar") {
     $stringId= '"' . "id" . '"';
     $stringId= '"' . "nombre" . '"';
-    $queryAlumnos = "SELECT $stringId,$stringId FROM public.alumnos INNER JOIN (SELECT * FROM public.rel_cursos_alumnos where $stringClaveCurso='ABC512') AS curso ON (alumnos.id = $stringIdAlumno);";
+    $queryAlumnos = "SELECT $stringId,$stringId FROM public.alumnos INNER JOIN (SELECT * FROM public.rel_cursos_alumnos where $stringClaveCurso=$clave) AS curso ON (alumnos.id = $stringIdAlumno);";
     $consultaAlumnos = pg_query($conexion, $queryAlumnos);
     echo "<script type='text/javascript'>location='../p_regAlumnos.php?alumnos=$consultaAlumnos;</script>";
 }
