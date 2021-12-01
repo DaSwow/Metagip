@@ -67,7 +67,9 @@ if (isset($_GET['curso'])) {
                                     <tr>
                                         <td class="fila2"><p><?php echo $alumnosEnCurso[$row]['id']; ?></p></td>
                                         <td class="fila2"><p><?php echo $alumnosEnCurso[$row]['nombre']; ?></p></td>
-                                        <td class="fila2"><form action="s_ElimAlumnosCurso.php?alumno=<?php echo $alumnosEnCurso[$row]['id'] ?>&curso=<?php echo $clave ?>" method="post">
+                                        <td class="fila2">
+                                            <form action="s_ElimAlumnosCurso.php?alumno=<?php echo $alumnosEnCurso[$row]['id'] ?>&curso=<?php echo $clave ?>" method="post">
+                                                <input type="hidden" value="<?php echo $clave; ?>">
                                                 <input type="submit" class="optns" value="Borrar" onclick="return confirm('¿Seguro que desea eliminar el alumno del curso?');" style="width: 60px;"/>
                                             </form></td>
                                     </tr>
@@ -75,9 +77,6 @@ if (isset($_GET['curso'])) {
                             } ?>
                         </table>
                         <nav id="btn">
-                            <form action="p_regAlumnos.php" method="post">
-                                <input type="submit" class="submit" value="Eliminar">
-                            </form>
                             <form action="p_menu.php" method="post">
                                 <input type="submit" class="submit" value="Regresar">
                             </form>
