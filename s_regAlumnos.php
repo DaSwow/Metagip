@@ -27,6 +27,6 @@ if (isset($_POST['btn_agregar'])) {
     $$stringId= '"' . "nombre" . '"';
     $queryNombreAlumno = "SELECT $stringId,$stringId FROM public.alumnos INNER JOIN (SELECT * FROM public.rel_cursos_alumnos where $stringClaveCurso='ABC512') AS curso ON (alumnos.id = $stringIdAlumno);";
     $consulta = pg_query($conexion, $queryAlumnosDelCurso);
-    echo "<script type='text/javascript'>location='../p_regAlumnos.php?alumnos=$consulta';</script>";
+    echo "<script type='text/javascript'>location='../p_regAlumnos.php?;</script>";
 }
 ?>
