@@ -6,8 +6,10 @@ $clave = $_POST['curso'];
 $idAlumno = $_POST['alumno'];
 $stringClaveCurso = '"' . "claveCurso" . '"';
 $stringIdAlumno = '"' . "idAlumno" . '"';
-$accion=$_POST['botonAccion'];
-if ($accion==="agregar") {
+$stringId = '"' . "id" . '"';
+$stringNombre = '"' . "nombre" . '"';
+$accion = $_POST['botonAccion'];
+if ($accion === "agregar") {
     //
     $query = "SELECT * FROM public.rel_cursos_alumnos WHERE ($stringClaveCurso='$clave') AND ($stringIdAlumno='$idAlumno');";
     $consulta = pg_query($conexion, $query);
@@ -22,10 +24,8 @@ if ($accion==="agregar") {
     } else {
         echo "<script type='text/javascript'>alert('Este alumn@ ya esta registrado');location='../p_regAlumnos.php';</script>";
     }
-} else if ($accion==="desplegar") {
-    $stringId= '"' . "id" . '"';
-    $stringNombre= '"' . "nombre" . '"';
-    $queryAlumnos = "SELECT $stringId,$stringNombre FROM public.alumnos INNER JOIN (SELECT * FROM public.rel_cursos_alumnos where $stringClaveCurso=$clave) AS curso ON (alumnos.id = $stringIdAlumno);";
+} else if ($accion === "desplegar") {
+    $queryAlumnos = "SELECT $stringId,$stringNombre FROM public.alumnos INNER JOIN (SELECT * FROM public.rel_cursos_alumnos where $stringClaveCurso='$clave') AS curso ON (alumnos.id = $stringIdAlumno);";
     $consultaAlumnos = pg_query($conexion, $queryAlumnos);
     echo "<script type='text/javascript'>location='../p_regAlumnos.php?alumnos=$consultaAlumnos;</script>";
 }
