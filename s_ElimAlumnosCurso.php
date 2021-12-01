@@ -1,7 +1,7 @@
 <?php
 require 'db.php';
 session_start();
-$clave = $_POST['curso'];
+$clave = $_POST['clave'];
 $idAlumno = $_POST['alumno'];
 $stringClaveCurso = '"' . "claveCurso" . '"';
 $stringIdAlumno = '"' . "idAlumno" . '"';
