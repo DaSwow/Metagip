@@ -38,7 +38,7 @@ if (isset($_GET['curso'])) {
                             
                                 <select name="curso" required>
                                     <?php while ($rowCurso = pg_fetch_assoc($consultaCurso)) { ?>
-                                        <option value="<?php echo $rowCurso['clave']; ?>"><?php echo $rowCurso['nombre']; ?></option>
+                                        <option value="<?php echo $rowCurso['clave']; ?>"><?php echo $rowCurso['clave']+'|'+$rowCurso['nombre']; ?></option>
                                     <?php } ?>
                                 </select>
                                 <br><br>
@@ -47,7 +47,7 @@ if (isset($_GET['curso'])) {
                             
                             <select name="alumno">
                                 <?php while ($row = pg_fetch_assoc($consultaAlumno)) { ?>
-                                    <option value="<?php echo $row['id']; ?>"><?php echo $row['nombre']; ?></option>
+                                    <option value="<?php echo $row['id']; ?>"><?php echo $row['id']+'|'+$row['nombre']; ?></option>
                                 <?php } ?>
                             </select>
                             <br><br>
