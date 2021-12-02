@@ -4,6 +4,7 @@ session_start();
 $correo_prof = $_SESSION['correo_usuario'];
 
 
+
 $query = "SELECT * FROM public.alumnos WHERE profesor='$correo_prof'";
 $queryCurso = "SELECT * FROM public.cursos WHERE profesor='$correo_prof'";
 $consultaCurso = pg_query($conexion, $queryCurso);
