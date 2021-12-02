@@ -39,10 +39,12 @@ if (isset($_GET['curso'])) {
                                 <select name="curso" required>
                                     <?php while ($rowCurso = pg_fetch_assoc($consultaCurso)) { ?>
                                         <option value="<?php echo $rowCurso['clave']; ?>"><?php echo $rowCurso['clave'] ," | ", $rowCurso['nombre']; ?></option>
-                                        <input type="submit" class="submit"  name="botonAccion"   value="desplegar">
+                                       
                                     <?php } ?>
                                 </select>
+ <input type="submit" class="submit"  name="botonAccion"   value="desplegar">
                         </div>
+
                         <div class="buscador">
                             
                             <select name="alumno">
