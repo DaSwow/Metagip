@@ -433,7 +433,6 @@ del html registrar alumnos
 .cursos select{
     width: 80%;
     height: 30px;
-    padding: 10px;
     font-size: 16px;
     margin-left: 10px;
     border-top-style: none;
@@ -462,7 +461,6 @@ del html registrar alumnos
 .buscador select{
     width: 80%;
     height: 30px;
-    padding: 10px;
     font-size: 16px;
     margin-bottom: 25px;
     margin-left: 10px;
