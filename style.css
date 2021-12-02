@@ -293,7 +293,8 @@ del html registrar alumnos
 */
 #btn{
     height:-10px;
-    left:980px;
+    top:92%;
+    left:930px;
 }
 
 nav.editAlumno{
@@ -339,7 +340,7 @@ del html registrar alumnos
 */
 .table-container3{
     display: flex;
-    width: 1200px;
+    width: 1050px;
     height: 700px;
     background: #fff;
     box-shadow: 0 1px 1px 0 rgba(0, 0, 0, .2);
