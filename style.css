@@ -316,7 +316,7 @@ del html registrar alumnos
 */
 #scroll2{
     overflow:scroll;
-    height:450px;
+    height:360px;
     width:850px;
 }
 
@@ -387,16 +387,15 @@ del html registrar alumnos
 del html registrar alumnos
 */
 #cbox{
-    height:20px;
-    width:20px;
+    height:30px;
+    width:30px;
 }
 /*** 
 del html registrar alumnos
 */
 .cursos{
     width: 100%;
-    height: 20px;
-    padding: 20px;
+    padding: 10px;
     display: flex;
     margin-top: 30px;
     background-color:#c2b0f2;
@@ -420,7 +419,8 @@ del html registrar alumnos
     padding: 5px;
     float:left;
     font-size: 16px;
-    margin-bottom: 6px;
+    margin-bottom: 25px;
+    margin-left:50px;
     border-top-style: none;
     border-left-style: none;
     border-right-style: none;
@@ -431,10 +431,10 @@ del html registrar alumnos
 del html registrar alumnos
 */
 .cursos select{
-    width: 70%;
-    padding: 5px;
+    width: 80%;
+    height: 30px;
+    padding: 10px;
     font-size: 16px;
-    margin-bottom: 5px;
     margin-left: 10px;
     border-top-style: none;
     border-left-style: none;
@@ -446,7 +446,7 @@ del html registrar alumnos
 del html registrar alumnos
 */
 .buscador input{
-    width: 15%;
+    width: 30px;
     padding: 5px;
     float:left;
     font-size: 16px;
@@ -460,8 +460,9 @@ del html registrar alumnos
 del html registrar alumnos
 */
 .buscador select{
-    width: 70%;
-    padding: 5px;
+    width: 80%;
+    height: 30px;
+    padding: 10px;
     font-size: 16px;
     margin-bottom: 25px;
     margin-left: 10px;
@@ -471,5 +472,4 @@ del html registrar alumnos
     border-bottom: 1px solid #a8a8a8;
     color: #333;
 }
-
 

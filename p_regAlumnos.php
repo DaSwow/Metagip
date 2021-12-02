@@ -4,7 +4,6 @@ session_start();
 $correo_prof = $_SESSION['correo_usuario'];
 
 
-
 $query = "SELECT * FROM public.alumnos WHERE profesor='$correo_prof'";
 $queryCurso = "SELECT * FROM public.cursos WHERE profesor='$correo_prof'";
 $consultaCurso = pg_query($conexion, $queryCurso);
@@ -40,9 +39,9 @@ if (isset($_GET['curso'])) {
                                 <select name="curso" required>
                                     <?php while ($rowCurso = pg_fetch_assoc($consultaCurso)) { ?>
                                         <option value="<?php echo $rowCurso['clave']; ?>"><?php echo $rowCurso['clave'] ," | ", $rowCurso['nombre']; ?></option>
+                                        <input type="submit" class="submit"  name="botonAccion"   value="desplegar">
                                     <?php } ?>
                                 </select>
-                                <br><br>
                         </div>
                         <div class="buscador">
                             
@@ -51,10 +50,10 @@ if (isset($_GET['curso'])) {
                                     <option value="<?php echo $row['id']; ?>"><?php echo $row['id'] ," | ",$row['nombre']; ?></option>
                                 <?php } ?>
                             </select>
-                            <br><br>
+ <input type="submit" class="submit"  name="botonAccion"   value="agregar"> 
                         </div>
-                        <input type="submit" class="submit"  name="botonAccion"   value="agregar"> 
-                        <input type="submit" class="submit"  name="botonAccion"   value="desplegar">
+
+                        
                     </form>
 
                     <div id="scroll2">
