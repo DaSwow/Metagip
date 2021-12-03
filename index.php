@@ -13,7 +13,7 @@
         <div class="container">
             <div class="login-container">
                 <div s class="register">
-                    <h2>Registrarse prueba</h2>
+                    <h2>Registrarse</h2>
                     <form action="s_registrar.php" method="post">
                         <input type="text" placeholder="Nombre" class="nombre" name="nombre" required>
                         <input type="text" placeholder="Correo" class="correo" name = "correo" required>
